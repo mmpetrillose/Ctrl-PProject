@@ -1,0 +1,89 @@
+Wentworth Institute Of Technology
+
+College of Engineering & Technology
+Department Of Computer Science & Networking
+Software Design and Development – COMP 566
+Prof. Suresh.
+
+This document is largely borrowed from a similar document used at the University of Texas at Austin in teaching the software-engineering course and the adapted version from one of my Professors from Saint Joseph’s University.
+
+The Software Requirements Specification (SRS) sections given in this outline are guidelines to the contents of your SRS. Include at least these sections, using exactly the section numbering given below. Your team may have good reasons for wanting to deviate from this proposed outline. In this case, you must motivate any deviations before writing your document. If a section is not applicable in your case, do not delete it; instead, include the topic heading and write "Not applicable".
+
+
+1. INTRODUCTION
+** General background and reference information **
+	1.1 Purpose of this Document
+		Full description of the main objectives of the SRS document
+		(e.g. "This SRS describes the function and performance requirements allocated to the XYX system. The XYX is a stand-alone component of a system of gooblefleezers ...")
+	1.2 Scope of the Development Project
+		Identifies the product to be developed by name and function, lists limitations (if any), highlights distinct features, lists benefits as clearly and precisely as possible. This will provide the basis for the brief description of your product.
+	1.3 Definitions, Acronyms, and Abbreviations
+		Include any specialized terminology dictated by the application area or the product area. This will help the reader understand the rest of the text. Be sure to alphabetize! If this section becomes longer than one page, move the definitions, etc. to an Appendix and provide a pointer in this section.
+	1.4 References
+		Mention books, articles, web sites, worksheets, people who are sources of information about the application domain, etc.
+		Use proper and complete reference notation. If this section becomes longer than one page, move the references to an Appendix and provide a pointer in this section.
+	1.5 Overview of Document
+		A short description of how the rest of the SRS is organized and what can be found in the rest of the document.
+
+
+2. GENERAL DESCRIPTION
+** An "executive overview", very client-oriented **
+	2.1 User Characteristics
+		This section considers the needs of the anticipated users.
+		List critical characteristics of the system's human interfaces based on the anticipated users' characteristics.
+	2.2 Product Perspective
+		- If the product is stand-alone, give the relationship to other products.
+		- If the product is part of a larger product, then identify its interface to the other products.
+		- Identify the product's external interfaces with its environment.
+		- If the product uses existing hardware, describe the hardware.
+		- If the product requires new hardware, give a detailed explanation of the hardware.
+	2.3 Overview of Functional Requirements
+		Provide a short description of the functions to be performed by the software, i.e. what the product should do. This description must be in a form understandable to users, operators, and clients. The detailed requirements specifications are left to Section 3.2 in this document. If you number the Functional Requirements in a systematic manner, it will be easier for you to refer to them in Section 3.2 of the SRS, in the design document you will write later, and in the testing document (also to be written later). This should not be design-oriented, a common mistake.
+	2.4 Overview of Data Requirements
+		Describe data that are input or output from the product as well as any data that are stored within the system, for example in files or on disc. This section should only cover data requirements from the user's point of view.
+		Once again, this should not be design-oriented.
+	2.5 General Constraints, Assumptions, Dependencies, Guidelines
+		Include factors that impose constraints on the implementation of the software product. This can include hardware limitations or requirements, the amount of memory available, response times, policies, interfaces to other application software, networks, environmental limitations, compliance with relevant standards. This section can also provide guidance in situations when there may be more than one implementation strategy.
+		Examples:
+			"The product will only work with certain operating systems or a particular network environment."
+			"The product must be Web-based."
+			"The product cannot require persistent data."
+	2.6 User View of Product Use
+		This section will provide a user's-eye-view of the product.
+		This may include aspects such as narrative to describe the setting, sketches to show possible appearance of the screen, samples of the data that is stored, entered, or output, and dramatic scenarios that demonstrate the product in operation. If this section becomes longer than about two pages, then break some parts into Appendices and provide pointers from within the text of this section.
+ 
+
+3. SPECIFIC REQUIREMENTS
+** Technical information needed to design the software **
+	3.1 External Interface Requirements
+		- operator/user interface characteristics from the human factors point of view
+		- characteristics required of the interface between the software product and each of the hardware components
+		- interfaces with other software components or products, including other systems, utility software, databases, and operating systems
+	3.2 Detailed Description of Functional Requirements
+		3.2.1 Template for describing functional requirements
+			This lists the exact template your SRS will apply in describing each of the functional components that were identified in Section 2.3. You may also look at the DFD to help you to identify your functional components. For EACH functional component, you should have a section. Each of these sections should be at least the following:
+			- purpose / description
+			- inputs:
+				which inputs; in what form/format will inputs arrive; from what sources input will be derived, legal domains of each input element
+			- processing:
+				describes the *outcome* rather than the *implementation*; include any validity checks on the data, exact timing of each operation (if needed), how to handle unexpected or abnormal situations
+			- outputs:
+				the form, shape, destination, and volume of the output; output timing; range of parameters in the output; unit measure of the output; process by which the output is stored or destroyed; process for handling error messages produced as output
+			An example template might be the following: 
+				Component Name:
+				Purpose: 
+				Inputs to the Component: 
+				Processing: 
+				Outputs: 
+		3.2.2 through 3.2.x - The description of each functional requirement, using the template defined in 3.2.1
+	3.3 Performance Requirements
+		Issues such as number of connections to the system, number of simultaneous users, response time, number of files, size of files and tables, number of files, size of files and tables, number of transactions per interval (all defined in terms of acceptable ranges)
+	3.4 Quality Attributes
+		Issues such as security, availability, reliability, maintainability; to these extent possible, these should be specified in a quantifiable way so they can be accurately measured in the end product.
+
+
+4. Other requirements
+
+
+5. Here, you will include your Use Cases. 
+	If you used the traditional approach, you will include the Entity-Relationship diagram, the Data-Flow diagrams, and the State-Transition diagrams you used in creating the rest of this document. If you used the object-oriented approach, you will include the representation of classes and class hierarchies, the object relationship model and the object behavior model. 
