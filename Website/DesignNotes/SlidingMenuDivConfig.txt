@@ -1,0 +1,31 @@
+<style>
+   #u613{
+ 
+      transition-property: left;
+      transition-duration: 0.2s;
+      transition-timing-function: ease;
+ 
+      -webkit-transition-property: left;
+      -webkit-transition-duration: 0.2s;
+      -webkit-transition-timing-function: ease;
+   }
+   #u613:hover{
+      left:0px;
+   }
+</style>
+-------------------------------------------------------------------------------------------------
+<div class="clearfix colelem" id="pu572"><!-- group -->
+   <div class="browser_width" id="u572" style="width: 944px; margin-left: 0px; left: 0px; margin-right: -960px; padding-right: 16px;">
+      <!-- simple frame -->
+   </div>
+   <div class="clearfix" id="u613">
+      <!-- group -->
+      <div class="grpelem" id="u589">
+         <!-- simple frame -->
+      </div>
+      <div class="clip_frame grpelem" id="u605">
+         <!-- image -->
+         <img class="block" id="u605_img" src="images/menu-icon.gif" alt="" width="50" height="50">
+      </div>
+   </div>
+</div>
