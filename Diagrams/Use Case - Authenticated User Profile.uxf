@@ -4,8 +4,8 @@
   <element>
     <type>com.umlet.element.Actor</type>
     <coordinates>
-      <x>410</x>
-      <y>230</y>
+      <x>370</x>
+      <y>360</y>
       <w>100</w>
       <h>120</h>
     </coordinates>
@@ -19,7 +19,7 @@ User</panel_attributes>
       <x>550</x>
       <y>230</y>
       <w>210</w>
-      <h>280</h>
+      <h>330</h>
     </coordinates>
     <panel_attributes>Authenticated Users Profile</panel_attributes>
     <additional_attributes/>
@@ -40,7 +40,7 @@ Profile</panel_attributes>
     <type>com.umlet.element.UseCase</type>
     <coordinates>
       <x>600</x>
-      <y>360</y>
+      <y>380</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
@@ -52,7 +52,7 @@ Profile</panel_attributes>
     <type>com.umlet.element.UseCase</type>
     <coordinates>
       <x>600</x>
-      <y>440</y>
+      <y>490</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
@@ -63,8 +63,8 @@ Follower</panel_attributes>
   <element>
     <type>com.umlet.element.UseCase</type>
     <coordinates>
-      <x>790</x>
-      <y>400</y>
+      <x>880</x>
+      <y>440</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
@@ -74,32 +74,32 @@ Follower</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>630</x>
-      <y>360</y>
-      <w>180</w>
-      <h>80</h>
+      <x>690</x>
+      <y>370</y>
+      <w>210</w>
+      <h>110</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 &lt;&lt;includes&gt;&gt;</panel_attributes>
-    <additional_attributes>160;60;30;40</additional_attributes>
+    <additional_attributes>190;90;30;30</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>630</x>
-      <y>380</y>
-      <w>180</w>
-      <h>80</h>
+      <x>690</x>
+      <y>430</y>
+      <w>210</w>
+      <h>100</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 &lt;&lt;includes&gt;&gt;</panel_attributes>
-    <additional_attributes>160;40;30;60</additional_attributes>
+    <additional_attributes>190;30;30;80</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Actor</type>
     <coordinates>
-      <x>810</x>
-      <y>230</y>
+      <x>900</x>
+      <y>270</y>
       <w>80</w>
       <h>120</h>
     </coordinates>
@@ -110,44 +110,44 @@ Follower</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>690</x>
-      <y>240</y>
-      <w>160</w>
-      <h>80</h>
+      <y>270</y>
+      <w>240</w>
+      <h>50</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>140;30;30;60</additional_attributes>
+    <additional_attributes>220;30;30;30</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>460</x>
-      <y>240</y>
-      <w>160</w>
-      <h>80</h>
+      <x>420</x>
+      <y>270</y>
+      <w>200</w>
+      <h>150</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>140;60;30;30</additional_attributes>
+    <additional_attributes>180;30;30;130</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>460</x>
-      <y>240</y>
-      <w>160</w>
+      <x>420</x>
+      <y>370</y>
+      <w>200</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>180;30;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>420</x>
+      <y>370</y>
+      <w>200</w>
       <h>160</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>140;140;30;30</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>460</x>
-      <y>240</y>
-      <w>160</w>
-      <h>240</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes>140;220;30;30</additional_attributes>
+    <additional_attributes>180;140;30;30</additional_attributes>
   </element>
 </diagram>
