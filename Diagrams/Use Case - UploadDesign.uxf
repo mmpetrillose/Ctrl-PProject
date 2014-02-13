@@ -4,21 +4,22 @@
   <element>
     <type>com.umlet.element.Actor</type>
     <coordinates>
-      <x>10</x>
-      <y>90</y>
+      <x>40</x>
+      <y>140</y>
       <w>200</w>
       <h>140</h>
     </coordinates>
-    <panel_attributes>Authenticated User</panel_attributes>
+    <panel_attributes>Authenticated
+User</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>240</x>
-      <y>90</y>
-      <w>230</w>
-      <h>280</h>
+      <x>260</x>
+      <y>110</y>
+      <w>180</w>
+      <h>210</h>
     </coordinates>
     <panel_attributes>Upload Design</panel_attributes>
     <additional_attributes/>
@@ -48,8 +49,8 @@
   <element>
     <type>com.umlet.element.UseCase</type>
     <coordinates>
-      <x>520</x>
-      <y>260</y>
+      <x>540</x>
+      <y>220</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
@@ -60,8 +61,8 @@
   <element>
     <type>com.umlet.element.UseCase</type>
     <coordinates>
-      <x>520</x>
-      <y>320</y>
+      <x>540</x>
+      <y>300</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
@@ -72,43 +73,43 @@
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>380</x>
-      <y>230</y>
-      <w>160</w>
-      <h>70</h>
+      <y>210</y>
+      <w>180</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 &lt;&lt;extends&gt;&gt;</panel_attributes>
-    <additional_attributes>30;50;140;50</additional_attributes>
+    <additional_attributes>30;70;160;30</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>380</x>
-      <y>260</y>
-      <w>160</w>
-      <h>100</h>
+      <y>250</y>
+      <w>180</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 &lt;&lt;extends&gt;&gt;</panel_attributes>
-    <additional_attributes>30;30;140;80</additional_attributes>
+    <additional_attributes>30;30;160;70</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>130</x>
-      <y>100</y>
-      <w>180</w>
-      <h>90</h>
+      <x>140</x>
+      <y>140</y>
+      <w>170</w>
+      <h>50</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>30;30;160;70</additional_attributes>
+    <additional_attributes>30;30;150;30</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>270</x>
       <y>160</y>
-      <w>142</w>
+      <w>150</w>
       <h>120</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
@@ -118,7 +119,7 @@
   <element>
     <type>com.umlet.element.UseCase</type>
     <coordinates>
-      <x>520</x>
+      <x>540</x>
       <y>150</y>
       <w>120</w>
       <h>40</h>
@@ -131,11 +132,11 @@
     <coordinates>
       <x>380</x>
       <y>120</y>
-      <w>160</w>
+      <w>180</w>
       <h>70</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 &lt;&lt;includes&gt;&gt;</panel_attributes>
-    <additional_attributes>140;50;30;50</additional_attributes>
+    <additional_attributes>160;50;30;50</additional_attributes>
   </element>
 </diagram>
