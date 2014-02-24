@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Home</title>
+<link href="css/basic.css" rel="stylesheet" type="text/css" />
+<link href="css/LoginPopup.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.ButLogin {
+	position: fixed;
+}
+.butlogin {
+	position: fixed;
+	height: 200px;
+	width: 500px;
+	left: 500px;
+}
+</style> 
+<!-- Link to CSS sheet basic.css-->
+</head>
+
+<body>
+
+<div class="container">
+  <div class="header">
+  <div class="fltlft"> <a href = "#"><img src="image/Ctrl-P-.png" width="200" height="100" alt="Ctrl-P logo" /></a>
+  </div><!-- end float left-->	 
+   <div class="fltrt">
+       <div class="panel">
+		<a href="#login_form" id="login_pop">Log In</a>
+		<a href="#join_form" id="join_pop">Sign Up</a>
+       </div><!-- End of panel-->
+  </div><!--end of float right login stuff-->
+ </div><!-- End of the header-->
+ 
+  <div class="content">
+  
+  <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+    <h3>Menu</h3>
+    <a href="#">Home</a>
+    <a href="#">Basic Information</a>
+    <a href="#">Tutorials</a>
+    <a href="#">External Tutorials</a>
+    <a href="#">Internal Tutorials</a>
+    <a href="#">Design Collection</a>
+</nav>
+   <!-- popup Login -->
+        <a href="#x" class="overlay" id="login_form"></a>
+        <div class="popup">
+            <h2>Welcome Ctrl-P User!</h2>
+            <p>Please enter your login and password here</p>
+            <div>
+                <label for="login">Login</label>
+                <input type="text" id="login" value="" />
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" id="password" value="" />
+            </div>
+            <input type="button" value="Log In" />
+            <a class="close" href="#close"></a>
+        </div><!-- End of Login Popup-->
+        <!-- popup Sign up -->
+        <a href="#x" class="overlay" id="join_form"></a>
+        <div class="popup">
+            <h2>Sign Up</h2>
+            <p>Please enter your details here</p>
+            <div>
+                <label for="email">Login (Email)</label>
+                <input type="text" id="email" value="" />
+            </div>
+            <div>
+                <label for="pass">Password</label>
+                <input type="password" id="pass" value="" />
+            </div>
+            <div>
+                <label for="firstname">First name</label>
+                <input type="text" id="firstname" value="" />
+            </div>
+            <div>
+                <label for="lastname">Last name</label> 
+                <input type="text" id="lastname" value="" />
+            </div>
+            <input type="button" value="Sign Up" />&nbsp;&nbsp;&nbsp;or&nbsp;&nbsp;&nbsp;<a href="#login_form" id="login_pop">Log In</a>
+            <a class="close" href="#close"></a>
+        </div><!-- end sign up-->
+
+  
+  
+    <h1>&nbsp;</h1>
+    <!-- end .content --></div>
+  <div class="footer">
+  <!-- Open the menu-->
+
+
+    <p>&nbsp;</p>
+    <!-- end .footer --></div>
+  <!-- end .container --></div>
+</body>
+</html>
