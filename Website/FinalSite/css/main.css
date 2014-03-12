@@ -205,4 +205,108 @@ input {
 	background-image: -moz-linear-gradient(270deg,rgba(224,224,224,1.00) 1.04%,rgba(208,208,208,1.00) 100%);
 	background-image: -o-linear-gradient(270deg,rgba(224,224,224,1.00) 1.04%,rgba(208,208,208,1.00) 100%);
 	background-image: linear-gradient(180deg,rgba(224,224,224,1.00) 1.04%,rgba(208,208,208,1.00) 100%);
+}#userIndentificationDiv {
+	width: 860px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 200px;
+	margin-top: 20px;
+	border-radius: 10px;
+	-webkit-box-shadow: 1px 0px 5px 0px;
+	box-shadow: 1px 0px 5px 0px;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+}
+#userSummaryDiv {
+	width: 410px;
+	height: 200px;
+	border-radius: 10px;
+	-webkit-box-shadow: 1px 0px 5px;
+	box-shadow: 1px 0px 5px;
+	margin-top: 20px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	margin-left: 15px;
+	float: left;
+}
+#contactInfoDiv {
+	width: 410px;
+	height: 200px;
+	border-radius: 10px;
+	-webkit-box-shadow: 1px 0px 5px;
+	box-shadow: 1px 0px 5px;
+	float: left;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+#collabChatDiv {
+	width: 855px;
+	height: 200px;
+	border-radius: 10px;
+	-webkit-box-shadow: 1px 0px 5px;
+	box-shadow: 1px 0px 5px;
+	float: left;
+	margin-top: 20px;
+	padding-left: 10px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	margin-left: 15px;
+}
+#downloadedModelDiv {
+	width: 855px;
+	height: 200px;
+	border-radius: 10px;
+	-webkit-box-shadow: 1px 0px 5px;
+	box-shadow: 1px 0px 5px;
+	float: left;
+	margin-top: 20px;
+	padding-left: 10px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	margin-left: 15px;
+}
+#uploadedModelDiv {
+	width: 855px;
+	height: 200px;
+	border-radius: 10px;
+	-webkit-box-shadow: 1px 0px 5px;
+	box-shadow: 1px 0px 5px;
+	float: left;
+	margin-top: 20px;
+	padding-left: 10px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	margin-left: 15px;
+}
+#collaboratorModelDiv {
+	width: 855px;
+	height: 200px;
+	border-radius: 10px;
+	-webkit-box-shadow: 1px 0px 5px;
+	box-shadow: 1px 0px 5px;
+	float: left;
+	margin-top: 20px;
+	padding-left: 10px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	margin-left: 15px;
+}
+#privateModelDiv {
+	width: 855px;
+	height: 200px;
+	border-radius: 10px;
+	-webkit-box-shadow: 1px 0px 5px;
+	box-shadow: 1px 0px 5px;
+	float: left;
+	margin-top: 20px;
+	padding-left: 10px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	margin-left: 15px;
 }
