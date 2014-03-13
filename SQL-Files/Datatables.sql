@@ -2,8 +2,6 @@ SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
-DROP SCHEMA IF EXISTS `ctrlp` ;
-CREATE SCHEMA IF NOT EXISTS `ctrlp` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
 USE `ctrlp` ;
 
 -- -----------------------------------------------------
@@ -27,7 +25,7 @@ CREATE TABLE IF NOT EXISTS `ctrlp`.`Users` (
   `idUsers` INT NOT NULL AUTO_INCREMENT,
   `UserColors_idUserColors` INT NOT NULL,
   `user_name` VARCHAR(45) NOT NULL,
-  `email` VARCHAR(320) NOT NULL,
+  `email` VARCHAR(255) NOT NULL,
   `pass_hash` VARCHAR(128) NOT NULL,
   `pass_salt` VARCHAR(64) NOT NULL,
   `last_login` DATETIME NULL DEFAULT NULL,
@@ -74,8 +72,8 @@ CREATE TABLE IF NOT EXISTS `ctrlp`.`Models` (
   `model_title` VARCHAR(255) NOT NULL,
   `rep_pos` INT NOT NULL DEFAULT 0,
   `rep_neg` INT NOT NULL DEFAULT 0,
-  `private_restrict` TINYINT(1) NOT NULL DEFAULT 'False',
-  `follower_restrict` TINYINT(1) NOT NULL DEFAULT 'False',
+  `private_restrict` TINYINT(1) NOT NULL DEFAULT '0',
+  `follower_restrict` TINYINT(1) NOT NULL DEFAULT '0',
   `upload_date` DATETIME NOT NULL,
   `model_description` TEXT NOT NULL,
   `download_count` INT NOT NULL DEFAULT 0,
@@ -420,7 +418,7 @@ DROP TABLE IF EXISTS `ctrlp`.`ContactInfo` ;
 CREATE TABLE IF NOT EXISTS `ctrlp`.`ContactInfo` (
   `idContactInfo` INT NOT NULL,
   `Services_idServices` INT NOT NULL,
-  `alternate_email` VARCHAR(320) NULL,
+  `alternate_email` VARCHAR(255) NULL,
   `address` VARCHAR(511) NULL,
   `phone` VARCHAR(45) NULL,
   PRIMARY KEY (`idContactInfo`),
