@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Homepage</title>
+<title>Ctrl-P</title>
 <link href="css/main.css" rel="stylesheet" type="text/css">
 <link href="css/overlay.css" rel="stylesheet" type="text/css">
 <script src="js/JQuery1_11_0.js"></script>
@@ -24,7 +24,7 @@
         <input type="text" size="35" placeholder="Search..." />
       </div>
       <div id="profile" class="inset-text-grey">
-        <?php include('php/accountControl.php');?>
+        <?php include('php/accountcontrol.php');?>
       </div>
     </div>
     <div id="content">
@@ -33,54 +33,20 @@
       </div>
       <div id="featDownload" class="inset-text-white">
         <h1  class="inset-text-white">Feature Download</h1>
+        <?php include('php/featdown.php');?>
       </div>
       <div id="featTutorial">
         <h1  class="inset-text-white">Feature Tutorial</h1>
+        <?php include('php/feattut.php');?>
       </div>
-      <!-- popup Login -->
         <a href="#x" class="overlay" id="loginForm"></a>
         <div class="popup inset-text-white centered" id="login">
-          <div id="username">
-            <label for="login">Username</label><br/>
-            <input type="text" id="login" value="" />
-          </div>
-          <div id="password">
-            <label for="password">Password</label><br/>
-            <input type="password" id="password" value="" />
-          </div>
-          <div id="submital">
-            <input type="button" value="Login" />
-          </div>
+          <?php include('php/loginpop.php');?>
         </div>
-      <!-- End of Login Popup-->
-      <!-- popup Sign up -->
         <a href="#x" class="overlay" id="joinForm"></a>
         <div class="popup inset-text-white centered" id="join">
-          <div id="newUsernameDiv">
-            <label for="newUsername">Username</label>
-            <input type="text" id="newUsername" value="" />
-          </div>
-          <div id="emailDiv">
-            <label for="email">Email</label>
-            <input type="text" id="email" value="" />
-          </div>
-          <div id="emailVerifyDiv">
-            <label for="emailVerify">Confirm-Email</label>
-            <input type="text" id="emailVerify" value="" />
-          </div>
-          <div id="newPasswordDiv">
-            <label for="newPassword">Password</label>
-            <input type="password" id="newPassword" value="" />
-          </div>
-          <div id="passwordVerifyDiv">
-            <label for="passwordVerify">Confirm-Password</label>
-            <input type="password" id="passwordVerify" value="" />
-          </div>
-          <div id="joinDiv">
-            <input type="button" value="Join" />
-          </div>
+          <?php include('php/joinpop.php');?>
         </div>
-        <!-- end sign up-->
     </div>
     <div id="footer">
       <a href="" id="about">About</a> |
