@@ -220,7 +220,7 @@ input {
 	padding-left: 5px;
 }
 #userSummaryDiv {
-	width: 410px;
+	width: 855px;
 	height: 200px;
 	border-radius: 10px;
 	-webkit-box-shadow: 1px 0px 5px;
@@ -230,7 +230,6 @@ input {
 	padding-bottom: 5px;
 	padding-left: 10px;
 	margin-left: 15px;
-	float: left;
 }
 #contactInfoDiv {
 	width: 410px;
@@ -251,7 +250,6 @@ input {
 	border-radius: 10px;
 	-webkit-box-shadow: 1px 0px 5px;
 	box-shadow: 1px 0px 5px;
-	float: left;
 	margin-top: 20px;
 	padding-left: 10px;
 	padding-right: 5px;
@@ -264,7 +262,6 @@ input {
 	border-radius: 10px;
 	-webkit-box-shadow: 1px 0px 5px;
 	box-shadow: 1px 0px 5px;
-	float: left;
 	margin-top: 20px;
 	padding-left: 10px;
 	padding-right: 5px;
@@ -277,7 +274,6 @@ input {
 	border-radius: 10px;
 	-webkit-box-shadow: 1px 0px 5px;
 	box-shadow: 1px 0px 5px;
-	float: left;
 	margin-top: 20px;
 	padding-left: 10px;
 	padding-right: 5px;
@@ -290,7 +286,6 @@ input {
 	border-radius: 10px;
 	-webkit-box-shadow: 1px 0px 5px;
 	box-shadow: 1px 0px 5px;
-	float: left;
 	margin-top: 20px;
 	padding-left: 10px;
 	padding-right: 5px;
@@ -303,7 +298,6 @@ input {
 	border-radius: 10px;
 	-webkit-box-shadow: 1px 0px 5px;
 	box-shadow: 1px 0px 5px;
-	float: left;
 	margin-top: 20px;
 	padding-left: 10px;
 	padding-right: 5px;
