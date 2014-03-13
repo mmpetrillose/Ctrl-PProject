@@ -1,0 +1,15 @@
+-- --------------------------------------------------------------------------------
+-- Routine DDL
+-- Note: comments before and after the routine body will not be stored by the server
+-- --------------------------------------------------------------------------------
+DELIMITER $$
+
+CREATE DEFINER=`austin`@`%` PROCEDURE `get_user_uploads`(username varchar(45))
+BEGIN
+SELECT model_title, picture_location, Models.upload_date
+FROM Users JOIN Models
+ON Users.idUsers=Models.Users_idUsers
+JOIN ModelPictures
+ON Models.idModels=ModelPictures.Models_idModels
+WHERE user_name=username AND main_photo='1';
+END

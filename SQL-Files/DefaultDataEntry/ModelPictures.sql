@@ -1,0 +1,5 @@
+INSERT INTO `ctrlp`.`ModelPictures` (`Models_idModels`, `picture_location`, `picture_title`, `picture_comment`, `upload_date`, `main_photo`) VALUES ('1', '/place/place', 'Something01', 'something01', '2014-02-01 10:11:10', '1');
+INSERT INTO `ctrlp`.`ModelPictures` (`Models_idModels`, `picture_location`, `picture_title`, `picture_comment`, `upload_date`) VALUES ('1', '/place/place2', 'Something02', 'something02', '2014-02-01 10:11:11');
+INSERT INTO `ctrlp`.`ModelPictures` (`Models_idModels`, `picture_location`, `picture_title`, `picture_comment`, `upload_date`, `main_photo`) VALUES ('2', '/place2/place', 'Something03', 'something03', '2014-02-01 10:11:12', '1');
+INSERT INTO `ctrlp`.`ModelPictures` (`Models_idModels`, `picture_location`, `picture_title`, `picture_comment`, `upload_date`, `main_photo`) VALUES ('3', '/place3/place', 'Something04', 'something04', '2014-02-01 10:11:13', '1');
+select * from ModelPictures;

@@ -31,7 +31,6 @@ CREATE TABLE IF NOT EXISTS `ctrlp`.`Users` (
   `last_login` DATETIME NULL DEFAULT NULL,
   `user_online` TINYINT(1) NOT NULL DEFAULT False,
   `public_summary` TEXT NULL,
-  `collab_summary` TEXT NULL,
   PRIMARY KEY (`idUsers`),
   CONSTRAINT `fk_Users_UserColors1`
     FOREIGN KEY (`UserColors_idUserColors`)
@@ -76,7 +75,7 @@ CREATE TABLE IF NOT EXISTS `ctrlp`.`Models` (
   `upload_date` DATETIME NOT NULL,
   `model_description` TEXT NOT NULL,
   `download_count` INT NOT NULL DEFAULT 0,
-  `model_views` INT NOT NULL,
+  `model_views` INT NOT NULL DEFAULT 0,
   PRIMARY KEY (`idModels`),
   CONSTRAINT `fk_Models_Users`
     FOREIGN KEY (`Users_idUsers`)
@@ -356,6 +355,7 @@ CREATE TABLE IF NOT EXISTS `ctrlp`.`ModelPictures` (
   `picture_title` VARCHAR(255) NOT NULL,
   `picture_comment` VARCHAR(511) NOT NULL,
   `upload_date` DATETIME NOT NULL,
+  `main_photo` TINYINT(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`idModelPictures`),
   CONSTRAINT `fk_ModelPictures_Models1`
     FOREIGN KEY (`Models_idModels`)

@@ -1,0 +1,17 @@
+-- --------------------------------------------------------------------------------
+-- Routine DDL
+-- Note: comments before and after the routine body will not be stored by the server
+-- --------------------------------------------------------------------------------
+DELIMITER $$
+
+CREATE DEFINER=`austin`@`%` PROCEDURE `get_user_downloads`(username varchar(45))
+BEGIN
+SELECT model_title, picture_location, download_date
+FROM Users JOIN Downloads
+ON Downloads.Users_idUsers=Users.idUsers
+JOIN Models
+ON Downloads.Models_idModels=Models.idModels
+JOIN ModelPictures
+ON Downloads.Models_idModels=ModelPictures.Models_idModels
+WHERE user_name=username AND main_photo='1';
+END
