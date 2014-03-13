@@ -3,16 +3,16 @@
 <head>
 <meta charset="utf-8">
 <title>Homepage</title>
-<link href="../css/main.css" rel="stylesheet" type="text/css">
-<link href="../css/overlay.css" rel="stylesheet" type="text/css">
-<script src="../js/JQuery1_11_0.js"></script>
-<script src="../js/search.js"></script>
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<link href="css/overlay.css" rel="stylesheet" type="text/css">
+<script src="js/JQuery1_11_0.js"></script>
+<script src="js/search.js"></script>
 </head>
 <body>
 <div id="wrapper" class="clearfix">
     <div id="header">
       <div id="homeDiv" class="inset-text-grey">
-        <a href="../html/index.html" id="home">Ctrl-P</a>
+        <a href="index.php" id="home">Ctrl-P</a>
       </div>
       <div id="catalogDiv" class="inset-text-grey">
         <a href="" id="catalog">Catalog</a>
@@ -24,19 +24,30 @@
         <input type="text" size="35" placeholder="Search..." />
       </div>
       <div id="profile" class="inset-text-grey">
-        <a href="#loginForm" id="loginBtn">Login</a> | 
-        <a href="#joinForm" id="joinBtn">Join</a>
+        <?php include('php/accountcontrol.php');?>
       </div>
     </div>
     <div id="content">
-      <div id="slideshow">
-        Slideshow Here
+      <div id="userIndentificationDiv">
+        User Info
       </div>
-      <div id="featDownload" class="inset-text-white">
-        <h1  class="inset-text-white">Feature Download</h1>
+      <div id="userSummaryDiv">
+        <h3 class="inset-text-white">Summary</h3>
       </div>
-      <div id="featTutorial">
-        <h1  class="inset-text-white">Feature Tutorial</h1>
+      <div id="collabChatDiv">
+        Collaborator Chat
+      </div>
+      <div id="downloadedModelDiv">
+        <h3 class="inset-text-white">Downloads</h3>
+      </div>
+      <div id="uploadedModelDiv">
+        <h3 class="inset-text-white">Uploads</h3>
+      </div>
+      <div id="collaboratorModelDiv">
+        <h3 class="inset-text-white">Collaborator Models</h3>
+      </div>
+      <div id="privateModelDiv">
+        <h3 class="inset-text-white">Private Models</h3>
       </div>
       <!-- popup Login -->
         <a href="#x" class="overlay" id="loginForm"></a>
