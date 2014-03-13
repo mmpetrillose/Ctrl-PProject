@@ -1,0 +1,10 @@
+-- --------------------------------------------------------------------------------
+-- Routine DDL
+-- Note: comments before and after the routine body will not be stored by the server
+-- --------------------------------------------------------------------------------
+DELIMITER $$
+
+CREATE DEFINER=`austin`@`%` PROCEDURE `add_user`(user_name varchar(45), email  varchar(255), pass_hash varchar(128), pass_salt varchar(64))
+BEGIN
+INSERT INTO `ctrlp`.`Users` (`UserColors_idUserColors`, `user_name`, `email`, `pass_hash`, `pass_salt`, `user_online`) VALUES ('140', user_name, email, pass_hash, pass_salt, '0');
+END

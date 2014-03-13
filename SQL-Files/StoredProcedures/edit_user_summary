@@ -1,0 +1,10 @@
+-- --------------------------------------------------------------------------------
+-- Routine DDL
+-- Note: comments before and after the routine body will not be stored by the server
+-- --------------------------------------------------------------------------------
+DELIMITER $$
+
+CREATE DEFINER=`austin`@`%` PROCEDURE `edit_user_summary`(username varchar(45), summary text)
+BEGIN
+UPDATE `ctrlp`.`Users` SET `public_summary`= summary WHERE `user_name`=username;
+END

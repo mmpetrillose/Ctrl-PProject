@@ -10,7 +10,7 @@ USE `ctrlp` ;
 DROP TABLE IF EXISTS `ctrlp`.`UserColors` ;
 
 CREATE TABLE IF NOT EXISTS `ctrlp`.`UserColors` (
-  `idUserColors` INT NOT NULL,
+  `idUserColors` INT NOT NULL AUTO_INCREMENT,
   `Color` VARCHAR(6) NOT NULL,
   PRIMARY KEY (`idUserColors`))
 ENGINE = InnoDB;
@@ -32,7 +32,6 @@ CREATE TABLE IF NOT EXISTS `ctrlp`.`Users` (
   `user_online` TINYINT(1) NOT NULL DEFAULT False,
   `public_summary` TEXT NULL,
   `collab_summary` TEXT NULL,
-  `avatar_location` VARCHAR(255) NULL,
   PRIMARY KEY (`idUsers`),
   CONSTRAINT `fk_Users_UserColors1`
     FOREIGN KEY (`UserColors_idUserColors`)
@@ -54,7 +53,7 @@ CREATE INDEX `fk_Users_UserColors1_idx` ON `ctrlp`.`Users` (`UserColors_idUserCo
 DROP TABLE IF EXISTS `ctrlp`.`ModelCategories` ;
 
 CREATE TABLE IF NOT EXISTS `ctrlp`.`ModelCategories` (
-  `idModelCategories` INT NOT NULL,
+  `idModelCategories` INT NOT NULL AUTO_INCREMENT,
   `category_title` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`idModelCategories`))
 ENGINE = InnoDB;
@@ -102,7 +101,7 @@ CREATE INDEX `fk_Models_ModelCategories1_idx` ON `ctrlp`.`Models` (`ModelCategor
 DROP TABLE IF EXISTS `ctrlp`.`CollaboratorChat` ;
 
 CREATE TABLE IF NOT EXISTS `ctrlp`.`CollaboratorChat` (
-  `idCollaboratorChat` INT NOT NULL,
+  `idCollaboratorChat` INT NOT NULL AUTO_INCREMENT,
   `Users_idUsers` INT NOT NULL,
   `message` VARCHAR(256) NOT NULL,
   `post_time` DATETIME NOT NULL,
@@ -123,7 +122,7 @@ CREATE INDEX `fk_CollaberatorChat_Users1_idx` ON `ctrlp`.`CollaboratorChat` (`Us
 DROP TABLE IF EXISTS `ctrlp`.`Collaborators` ;
 
 CREATE TABLE IF NOT EXISTS `ctrlp`.`Collaborators` (
-  `idCollaborators` INT NOT NULL,
+  `idCollaborators` INT NOT NULL AUTO_INCREMENT,
   `Users_idUsers` INT NOT NULL,
   `collab_id` INT NOT NULL,
   PRIMARY KEY (`idCollaborators`),
@@ -143,7 +142,7 @@ CREATE INDEX `fk_Collaberators_Users1_idx` ON `ctrlp`.`Collaborators` (`Users_id
 DROP TABLE IF EXISTS `ctrlp`.`Downloads` ;
 
 CREATE TABLE IF NOT EXISTS `ctrlp`.`Downloads` (
-  `idDownloads` INT NOT NULL,
+  `idDownloads` INT NOT NULL AUTO_INCREMENT,
   `Users_idUsers` INT NOT NULL,
   `Models_idModels` INT NOT NULL,
   `download_date` DATETIME NOT NULL,
@@ -171,7 +170,7 @@ CREATE INDEX `fk_Downloads_Models1_idx` ON `ctrlp`.`Downloads` (`Models_idModels
 DROP TABLE IF EXISTS `ctrlp`.`TutorialCategories` ;
 
 CREATE TABLE IF NOT EXISTS `ctrlp`.`TutorialCategories` (
-  `idTutorialCategories` INT NOT NULL,
+  `idTutorialCategories` INT NOT NULL AUTO_INCREMENT,
   `category_title` VARCHAR(45) NOT NULL DEFAULT '3D Printing',
   PRIMARY KEY (`idTutorialCategories`))
 ENGINE = InnoDB;
@@ -183,7 +182,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `ctrlp`.`Tutorials` ;
 
 CREATE TABLE IF NOT EXISTS `ctrlp`.`Tutorials` (
-  `idTutorials` INT NOT NULL,
+  `idTutorials` INT NOT NULL AUTO_INCREMENT,
   `Users_idUsers` INT NOT NULL,
   `TutorialCategories_idTutorialCategories` INT NOT NULL,
   `title` VARCHAR(80) NOT NULL,
@@ -216,7 +215,7 @@ CREATE INDEX `fk_Tutorials_TutorialCategories1_idx` ON `ctrlp`.`Tutorials` (`Tut
 DROP TABLE IF EXISTS `ctrlp`.`TutorialEdits` ;
 
 CREATE TABLE IF NOT EXISTS `ctrlp`.`TutorialEdits` (
-  `idEdits` INT NOT NULL,
+  `idEdits` INT NOT NULL AUTO_INCREMENT,
   `Tutorial_idTutorial` INT NOT NULL,
   `Users_idUsers` INT NOT NULL,
   `edit_time` DATETIME NOT NULL,
@@ -244,7 +243,7 @@ CREATE INDEX `fk_Edits_Users1_idx` ON `ctrlp`.`TutorialEdits` (`Users_idUsers` A
 DROP TABLE IF EXISTS `ctrlp`.`Step` ;
 
 CREATE TABLE IF NOT EXISTS `ctrlp`.`Step` (
-  `idSteps` INT NOT NULL,
+  `idSteps` INT NOT NULL AUTO_INCREMENT,
   `Tutorials_idTutorials` INT NOT NULL,
   `step_num` INT NOT NULL DEFAULT '1',
   `step_title` VARCHAR(80) NOT NULL,
@@ -266,7 +265,7 @@ CREATE INDEX `fk_Steps_Tutorials1_idx` ON `ctrlp`.`Step` (`Tutorials_idTutorials
 DROP TABLE IF EXISTS `ctrlp`.`StepPhotos` ;
 
 CREATE TABLE IF NOT EXISTS `ctrlp`.`StepPhotos` (
-  `idStepPhotos` INT NOT NULL,
+  `idStepPhotos` INT NOT NULL AUTO_INCREMENT,
   `Users_idUsers` INT NOT NULL,
   `Step_idSteps` INT NOT NULL,
   `photo_location` VARCHAR(255) NOT NULL,
@@ -295,7 +294,7 @@ CREATE INDEX `fk_StepPhotos_Step1_idx` ON `ctrlp`.`StepPhotos` (`Step_idSteps` A
 DROP TABLE IF EXISTS `ctrlp`.`TutorialMedia` ;
 
 CREATE TABLE IF NOT EXISTS `ctrlp`.`TutorialMedia` (
-  `idTutorialMedia` INT NOT NULL,
+  `idTutorialMedia` INT NOT NULL AUTO_INCREMENT,
   `Tutorials_idTutorials` INT NOT NULL,
   `Users_idUsers` INT NOT NULL,
   `media_title` VARCHAR(100) NOT NULL,
@@ -325,7 +324,7 @@ CREATE INDEX `fk_TutorialMedia_Users1_idx` ON `ctrlp`.`TutorialMedia` (`Users_id
 DROP TABLE IF EXISTS `ctrlp`.`ModelSTLs` ;
 
 CREATE TABLE IF NOT EXISTS `ctrlp`.`ModelSTLs` (
-  `idModelSTLs` INT NOT NULL,
+  `idModelSTLs` INT NOT NULL AUTO_INCREMENT,
   `Models_idModels` INT NOT NULL,
   `file_location` VARCHAR(255) NOT NULL,
   `file_title` VARCHAR(255) NOT NULL,
@@ -351,7 +350,7 @@ CREATE INDEX `fk_ModelSTLs_Models1_idx` ON `ctrlp`.`ModelSTLs` (`Models_idModels
 DROP TABLE IF EXISTS `ctrlp`.`ModelPictures` ;
 
 CREATE TABLE IF NOT EXISTS `ctrlp`.`ModelPictures` (
-  `idModelPictures` INT NOT NULL,
+  `idModelPictures` INT NOT NULL AUTO_INCREMENT,
   `Models_idModels` INT NOT NULL,
   `picture_location` VARCHAR(255) NOT NULL,
   `picture_title` VARCHAR(255) NOT NULL,
@@ -374,7 +373,7 @@ CREATE INDEX `fk_ModelPictures_Models1_idx` ON `ctrlp`.`ModelPictures` (`Models_
 DROP TABLE IF EXISTS `ctrlp`.`ServiceCategories` ;
 
 CREATE TABLE IF NOT EXISTS `ctrlp`.`ServiceCategories` (
-  `idServiceCategories` INT NOT NULL,
+  `idServiceCategories` INT NOT NULL AUTO_INCREMENT,
   `category_title` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`idServiceCategories`))
 ENGINE = InnoDB;
@@ -386,7 +385,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `ctrlp`.`Services` ;
 
 CREATE TABLE IF NOT EXISTS `ctrlp`.`Services` (
-  `idServices` INT NOT NULL,
+  `idServices` INT NOT NULL AUTO_INCREMENT,
   `Users_idUsers` INT NOT NULL,
   `ServiceCategories_idServiceCategories` INT NOT NULL,
   `service_title` VARCHAR(255) NOT NULL,
@@ -416,7 +415,7 @@ CREATE INDEX `fk_Services_ServiceCategories1_idx` ON `ctrlp`.`Services` (`Servic
 DROP TABLE IF EXISTS `ctrlp`.`ContactInfo` ;
 
 CREATE TABLE IF NOT EXISTS `ctrlp`.`ContactInfo` (
-  `idContactInfo` INT NOT NULL,
+  `idContactInfo` INT NOT NULL AUTO_INCREMENT,
   `Services_idServices` INT NOT NULL,
   `alternate_email` VARCHAR(255) NULL,
   `address` VARCHAR(511) NULL,
@@ -442,7 +441,7 @@ CREATE INDEX `fk_ContactInfo_Services1_idx` ON `ctrlp`.`ContactInfo` (`Services_
 DROP TABLE IF EXISTS `ctrlp`.`ServicePhotos` ;
 
 CREATE TABLE IF NOT EXISTS `ctrlp`.`ServicePhotos` (
-  `idServicePhotos` INT NOT NULL,
+  `idServicePhotos` INT NOT NULL AUTO_INCREMENT,
   `Services_idServices` INT NOT NULL,
   `picture_title` VARCHAR(255) NOT NULL,
   `picture_location` VARCHAR(255) NOT NULL,
@@ -465,7 +464,7 @@ CREATE INDEX `fk_ServicePhotos_Services1_idx` ON `ctrlp`.`ServicePhotos` (`Servi
 DROP TABLE IF EXISTS `ctrlp`.`StepEdits` ;
 
 CREATE TABLE IF NOT EXISTS `ctrlp`.`StepEdits` (
-  `idStepEdits` INT NOT NULL,
+  `idStepEdits` INT NOT NULL AUTO_INCREMENT,
   `Step_idSteps` INT NOT NULL,
   `Users_idUsers` INT NOT NULL,
   `edit_time` DATETIME NOT NULL,
@@ -493,7 +492,7 @@ CREATE INDEX `fk_StepEdits_Users1_idx` ON `ctrlp`.`StepEdits` (`Users_idUsers` A
 DROP TABLE IF EXISTS `ctrlp`.`TutorialLink` ;
 
 CREATE TABLE IF NOT EXISTS `ctrlp`.`TutorialLink` (
-  `idTutorialLink` INT NOT NULL,
+  `idTutorialLink` INT NOT NULL AUTO_INCREMENT,
   `Users_idUsers` INT NOT NULL,
   `title` VARCHAR(255) NOT NULL,
   `summary` VARCHAR(511) NOT NULL,

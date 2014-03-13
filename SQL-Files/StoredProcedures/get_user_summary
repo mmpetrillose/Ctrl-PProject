@@ -1,0 +1,12 @@
+-- --------------------------------------------------------------------------------
+-- Routine DDL
+-- Note: comments before and after the routine body will not be stored by the server
+-- --------------------------------------------------------------------------------
+DELIMITER $$
+
+CREATE DEFINER=`austin`@`%` PROCEDURE `get_user_summary`(username varchar(45))
+BEGIN
+SELECT public_summary, user_name
+FROM Users
+WHERE `user_name` = username;
+END
