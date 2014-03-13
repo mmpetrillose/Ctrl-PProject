@@ -1,0 +1,34 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007ffcf23e0867, pid=21690, tid=140723496613632
+#
+# JRE version: OpenJDK Runtime Environment (7.0_51-b31) (build 1.7.0_51-b31)
+# Java VM: OpenJDK 64-Bit Server VM (24.51-b03 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# V  [libjvm.so+0x51f867]  AsyncGetCallTrace+0x3a177
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please include
+# instructions on how to reproduce the bug and visit:
+#   http://icedtea.classpath.org/bugzilla
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007ffcec1c3800):  VMThread [stack: 0x00007ffcbdf6f000,0x00007ffcbe070000] [id=21700]
+
+siginfo:si_signo=SIGSEGV: si_errno=0, si_code=1 (SEGV_MAPERR), si_addr=0x0000000000000000
+
+Registers:
+RAX=0x0000000000000000, RBX=0x00007ffcf2c68700, RCX=0x0000000000000001, RDX=0x00000000000bf386
+RSP=0x00007ffcbe06e6e0, RBP=0x00007ffcbe06e730, RSI=0x00000002d8022eaf, RDI=0x00007ffcf2c68700
+R8 =0x0000000000000000, R9 =0xffffffffffff7010, R10=0x0000000000000016, R11=0x00007ffcf2ff5210
+R12=0x00007ffcf2c7cdc0, R13=0x00000002d8022eaf, R14=0x0000000000000002, R15=0x000000000000000a
+RIP=0x00007ffcf23e0867, EFLAGS=0x0000000000010202, CSGSFS=0x0000000000000033, ERR=0x0000000000000006
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007ffcbe06e6e0)
+0x00007ffcbe06e6e0:   0000000000000000 00000001f23e0b6d
+0x00007ffcbe06e6f0:   00007ffcec016740 00007ffcf2c7cdc0
