@@ -219,6 +219,7 @@ input {
 	padding-right: 5px;
 	padding-bottom: 5px;
 	padding-left: 5px;
+	position: relative;
 }
 #userSummaryDiv {
 	width: 855px;
@@ -315,9 +316,81 @@ input {
 	box-shadow: 1px 0px 5px;
 	margin-left: 5px;
 	margin-top: -5px;
-	background-color: #0BBDCC;
 	margin-right: 5px;
 }
 #theuser {
 	float: left;
+	font-size: small;
+}
+#bottom {
+	position: absolute;
+	left: 0;
+	bottom: 00;
+	margin-left: 20px;
+	margin-bottom: 30px;
+	font-size: xx-large;
+	font-weight: bold;
+}
+#rating {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	margin-left: 40px;
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+#logout {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	margin-left: 790px;
+	margin-bottom: -15px;
+	font-weight: bold;
+}
+#modify {
+	float: right;
+	margin-right: 5px;
+	font-weight: bold;
+}
+#editing {
+	width: 855px;
+	min-height: 200px;
+	border-radius: 10px;
+	-webkit-box-shadow: 1px 0px 5px;
+	box-shadow: 1px 0px 5px;
+	margin-top: 20px;
+	padding-left: 10px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	margin-left: 15px;
+}
+#passes {
+	width: 200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#sums {
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+}
+input[type="submit"]{
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	background: transparent;
+	border: none;
+	color: rgba(112,112,112,1.00);
+	font-size: medium;
+	color: rgba(112,112,112, 0.8);
+	text-shadow: 1px 4px 6px rgba(255,255,255,1.00), 0 0 0 #000, 1px 4px 6px rgba(255,255,255,1.00);
+}
+input[type="submit"]:hover{
+	color: #000;
+	text-shadow: none;
+}
+input[type="submit"]:active{
+	color: rgba(112,112,112,1.00);
+	font-size: medium;
+	color: rgba(112,112,112, 0.8);
+	text-shadow: 1px 4px 6px rgba(255,255,255,1.00), 0 0 0 #000, 1px 4px 6px rgba(255,255,255,1.00);
 }

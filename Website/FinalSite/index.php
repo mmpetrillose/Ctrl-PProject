@@ -39,11 +39,11 @@
         <h1  class="inset-text-white">Feature Tutorial</h1>
         <?php include('php/feattut.php');?>
       </div>
-        <a href="#x" class="overlay" id="loginForm"></a>
+        <a href="" class="overlay" id="loginForm"></a>
         <div class="popup inset-text-white centered" id="login">
           <?php include('php/loginpop.php');?>
         </div>
-        <a href="#x" class="overlay" id="joinForm"></a>
+        <a href="" class="overlay" id="joinForm"></a>
         <div class="popup inset-text-white centered" id="join">
           <?php include('php/joinpop.php');?>
         </div>

@@ -83,7 +83,7 @@ a#loginBtn, a#joinBtn{
 .popup input[type="text"]:hover, .popup input[type="password"]:hover {
     border-color: #555 #888 #888;
 }
-.popup input[type="button"]{
+.popup input[type="submit"]{
 	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
 	font-weight: bold;
 	background: transparent;
@@ -93,11 +93,11 @@ a#loginBtn, a#joinBtn{
 	color: rgba(112,112,112, 0.8);
 	text-shadow: 1px 4px 6px rgba(255,255,255,1.00), 0 0 0 #000, 1px 4px 6px rgba(255,255,255,1.00);
 }
-.popup input[type="button"]:hover{
+.popup input[type="submit"]:hover{
 	color: #000;
 	text-shadow: none;
 }
-.popup input[type="button"]:active{
+.popup input[type="submit"]:active{
 	color: rgba(112,112,112,1.00);
 	font-size: medium;
 	color: rgba(112,112,112, 0.8);
