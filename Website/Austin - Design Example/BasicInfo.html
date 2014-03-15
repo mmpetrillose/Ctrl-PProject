@@ -4,7 +4,7 @@
 
   <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
   <meta name="generator" content="7.2.232.244"/>
-  <title>Basic Information</title>
+  <title>Home</title>
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="css/site_global.css?397963719"/>
   <link rel="stylesheet" type="text/css" href="css/index.css?4011339801" id="pagesheet"/>
@@ -36,35 +36,7 @@
     <div class="clearfix colelem" id="pu572"><!-- group -->
      <div class="browser_width" id="u572"><!-- simple frame --></div>
      <div class="clearfix" id="u613"><!-- group -->
-      <div class="grpelem" id="u589"> 
-      <br>
-      <!-- This is just a basic understanding of what could be here-->
-         <table width="200" >
-  <tr>
-    <td><a href="index.html">Home</a></td>
-  </tr>
-  <tr>
-    <td>Basic Information</td>
-  </tr>
-  <tr>
-    <td><h3>Tutorials</h3></td>
-  </tr>
-  <tr>
-    <td>Internal Tutorials</td>
-  </tr>
-  <tr>
-    <td>External Tutorials</td>
-  </tr>
-  <tr>
-    <td>Design Collection</td>
-  </tr>
-  <tr>
-    <td>Help</td>
-  </tr>
-   <tr>
-    <td>Site Map</td>
-  </tr>
-</table></div><!-- Side Menu-->
+      <div class="grpelem" id="u589"><!-- simple frame --></div>
       <div class="clip_frame grpelem" id="u605"><!-- image -->
        <img class="block" id="u605_img" src="images/menu-icon.gif" alt="" width="50" height="50"/>
       </div>
@@ -79,38 +51,9 @@
         </div>
        </div>
       </div>
-     </div><!-- Top menu basically the header-->
-     
+     </div>
      <div class="popup_anchor" id="u720popup">
       <div class="ContainerGroup clearfix" id="u720"><!-- stack box -->
-      
-      <!--TABS GO HERE FOR INFORMATION-->
-  <div id="Tabs">
-<ul>
-<li id="li_tab1" onclick=”tab('tab1')” ><a>Tab 1</a></li>
-<li id="li_tab2" onclick=”tab('tab2')”><a>Tab 2</a></li>
-</ul>
-<div id="Content_Area">
-<div id="tab1">
-<p>This is the text for tab 1</p>
-</div><!-- Tab 1 end-->
-
-<div id="tab2" style= "display: none;">
- <!-- Need to set this as none because we dont want it to show until the user chooses it.-->
-<p>This is the text for tab 2.</p>
-</div> <!-- tab 2 end-->
-
-
-</div> <!--End of Content_Area Div -->
-</div> <!-- End of Tabs Div -->
-      
-  <!-- End Tabs-->    
-      
-      
-      
-      
-            
-               
        <div class="Container invi clearfix grpelem" id="u723"><!-- group -->
         <form class="form-grp clearfix grpelem" id="widgetu737" method="post" enctype="multipart/form-data" action="scripts/form-u737.php"><!-- none box -->
          <div class="fld-grp clearfix grpelem" id="widgetu744" data-required="true"><!-- none box -->
@@ -148,10 +91,35 @@
     </div>
     <div class="PamphletWidget clearfix colelem" id="pamphletu814"><!-- none box -->
      <div class="ThumbGroup clearfix grpelem" id="u837"><!-- none box -->
-      <div class="popup_anchor"></div>
+      <div class="popup_anchor">
+       
+      </div>
+      <div class="popup_anchor">
+       
+    </div>
      </div>
      <div class="popup_anchor" id="u817popup">
-       <div class="ContainerGroup clearfix" >
+      <div class="ContainerGroup clearfix" id="u817"><!-- stack box -->
+       <div class="Container clearfix grpelem" ><!-- column -->
+        <!-- This is where the tabs go-->
+       Hello Container clearfix grpelem
+        
+        
+        
+       </div>
+       <div class="Container invi clearfix grpelem" id="u826"><!-- column -->
+        <div class="clip_frame clearfix colelem" id="u827"><!-- image -->
+         <div id="u827_clip"></div>
+        </div>
+        <div class="clearfix colelem" id="u829-6">
+        </div>
+       </div>
+       <div class="Container invi clearfix grpelem" id="u818"><!-- column -->
+        <div class="clip_frame clearfix colelem" id="u820"><!-- image -->
+         <div id="u820_clip"></div>
+        </div>
+        <div class="clearfix colelem" id="u819-6"><!-- content --></div>
+       </div>
       </div>
      </div>
     </div>
@@ -192,16 +160,6 @@ Muse.Utils.showWidgetsWhenReady();/* body */
 Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
 } catch(e) { Muse.Assert.fail('Error calling selector function:' + e); }});
 </script>
-
-<script type= "text/javascript">
-function tab(tab) {
-document.getElementById('tab1').style.display = 'none';
-document.getElementById('tab2').style.display = 'none';
-document.getElementById('li_tab1').setAttribute("class", "");
-document.getElementById('li_tab2').setAttribute("class", "");
-document.getElementById(tab).style.display = 'block';
-document.getElementById('li_'+tab).setAttribute("class", "active");
-}
-</script>
    </body>
 </html>
+

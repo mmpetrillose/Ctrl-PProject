@@ -61,8 +61,8 @@ a:active{
 	max-height: 60px;
 	margin-left: auto;
 	margin-right: auto;
-	border-bottom-left-radius: 10px;
-	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
 	background-color: rgba(224,224,224,1.00);
 	border-width: thin;
 	border-color: #000000;
@@ -394,3 +394,6 @@ input[type="submit"]:active{
 	color: rgba(112,112,112, 0.8);
 	text-shadow: 1px 4px 6px rgba(255,255,255,1.00), 0 0 0 #000, 1px 4px 6px rgba(255,255,255,1.00);
 }
+
+
+

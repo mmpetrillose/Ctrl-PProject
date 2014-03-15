@@ -5,6 +5,7 @@
 <title>Ctrl-P</title>
 <link href="css/main.css" rel="stylesheet" type="text/css">
 <link href="css/overlay.css" rel="stylesheet" type="text/css">
+<link href="css/tutorial.css" rel="stylesheet" type="text/css" />
 <script src="js/JQuery1_11_0.js"></script>
 <script src="js/search.js"></script>
 </head>
@@ -18,7 +19,7 @@
         <a href="" id="catalog">Catalog</a>
       </div>
       <div id="tutorialDiv"  class="inset-text-grey">
-        <a href="TutorialMain.php" id="tutorial">Tutorial</a>
+        <a href="" id="tutorial">Tutorial</a>
       </div>
       <div id="search">
         <input type="text" size="35" placeholder="Search..." />
@@ -27,22 +28,39 @@
         <?php include('php/accountcontrol.php');?>
       </div>
     </div>
-    <div id="content">
-      <div id="slideshow">
-        Slideshow Here
+    <div id="tutorialOptions">
+    <div id="ViewExternTut" >
+        <a href="" id="ExternalTutorials">View External Tutorials</a>
       </div>
+       <div id="ViewInternTut" >
+        <a href="" id="InternalTutorials">View Internal Tutorials</a>
+      </div>
+       <div id="CreateaTutorial" >
+        <a href="" id="createTutorials">Create a External Tutorial</a>
+      </div>
+      <div id="CreateaTutorial" >
+        <a href="" id="createTutorials">Create a Internal Tutorial</a>
+      </div>
+    </div> 
+    <div id="content">
+     
+
       <div id="featDownload" class="inset-text-white">
-        <h1  class="inset-text-white">Feature Download</h1>
-        <?php include('php/featdown.php');?>
+        <h1  class="inset-text-white">Feature Tutorials</h1>
+        <?php include('php/FeatureTut.php');?>
       </div>
       <div id="featTutorial">
-        <h1  class="inset-text-white">Feature Tutorial</h1>
-        <?php include('php/feattut.php');?>
-      </div>
+        <h1  class="inset-text-white">New Tutorials</h1>
+        
+        <h3 class="inset-text-white"> Internal Tutorials: These are tutorials that are created by you!</h3>
+        <?php include('php/newInternTut.php');?>
+        <h3 class="inset-text-white"> External Tutorials: These are tutorials that are from a outside source!</h3>
+        <?php include('php/newExterTut.php');?>
+      </div>      
         <a href="" class="overlay" id="loginForm"></a>
         <div class="popup inset-text-white centered" id="login">
           <?php include('php/loginpop.php');?>
-        </div>
+        </div> 
         <a href="" class="overlay" id="joinForm"></a>
         <div class="popup inset-text-white centered" id="join">
           <?php include('php/joinpop.php');?>
