@@ -16,17 +16,13 @@
 	//execute Query
 	$result = mysql_query($query) or die ("Error in query: $query.".mysql_error());
 	
-	echo "<table cellpadding=\"5px\">"; 
 	while($row=mysql_fetch_array($result)){
-		echo "<tr>"; 
-		echo "<td><h3>";
+	    echo "<div id=\"Tutorma\">";
+		echo "<h3> Title: ";
 		echo "<a href=\"viewExterTut.php?tutid='".$rows["idTutorialLink"]."'\">";
-		echo $rows["title"]."</a></h3></td>";
-		echo "<td><h4>".$rows["user_name"]."</h4></td>";
-		echo "</tr><tr>"; 
-		echo "<td rowspan = '2'>".$rows['summary']."</td> </tr>";
-		echo "<tr></tr>" ;
-	}
-	echo "</table>"; 
-	
+		echo $rows["title"]."</a></h3>";
+		echo "<h4>Author: ".$rows["user_name"]."</h4>"; 
+		echo "<h4> Summary: </h4>".$rows['summary'];
+		echo "</div><br>";
+	}	
 	?>

@@ -39,7 +39,7 @@
         <a href="CreateAExternalTut.php" id="createTutorials">Create a External Tutorial</a>
       </div>
       <div id="CreateaTutorial" >
-        <a href="" id="createTutorials">Create a Internal Tutorial</a>
+        <a href="CreateAInternalTut.php" id="createTutorials">Create a Internal Tutorial</a>
       </div>
     </div> 
     <div id="content">
@@ -48,6 +48,7 @@
       <div id="featDownload" class="inset-text-white">
         <h1  class="inset-text-white">Feature Tutorials</h1>
         <?php include('php/FeatureTut.php');?>
+               
       </div>
       <div id="featTutorial">
         <h1  class="inset-text-white">New Tutorials</h1>

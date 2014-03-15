@@ -11,17 +11,16 @@
 	$result = mysql_query($query) or die ("Error in query: $query.".mysql_error());
 	$NumRecords= mysql_num_rows($results);
 	
-	echo "<table cellpadding='5px'>";
+
 	while($row=mysql_fetch_array($result)){
-		echo "<tr>" ; 
-		echo "<td><h3>";
+		echo "<div id=\"Tutorma\">";
+		echo "<h3> Title: ";
 		echo "<a href=\"viewExterTut.php?tutid='".$rows["idTutorialLink"]."'\">";
-		echo $rows["title"]."</a></h3></td>"; 
-		echo "<td><h4>".$rows["user_name"]."</h4></td>"; 
-		echo "</tr><tr>"; 
-		echo "<td>".$rows["rep_pos"]."</td>";
-		echo "<td>".$rows["rep_neg"]."</td></tr>"; 
-		echo "<tr></tr>" ; 
+		echo $rows["title"]."</a></h3><br>"; 
+		echo "<h4> Author: ".$rows["user_name"]."</h4>";  
+		echo "<h4> Positive Rating: ".$rows["rep_pos"]. "</h4>";
+		echo "<h4> Negative Rating: ".$rows["rep_neg"]."</h4>"; 
+		echo "</div>";
 	}
-	echo "</table>"; 
+ 
 	?>

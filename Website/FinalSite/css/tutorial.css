@@ -79,3 +79,12 @@
 	font-size: medium;
 	text-shadow:none;
 }
+
+#Tutorma{
+border:2px solid;
+border-radius:25px;
+padding:10px 40px; 
+background:#dddddd;
+width:300px;
+
+}
