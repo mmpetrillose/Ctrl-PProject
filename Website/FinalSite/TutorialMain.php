@@ -36,7 +36,7 @@
         <a href="" id="InternalTutorials">View Internal Tutorials</a>
       </div>
        <div id="CreateaTutorial" >
-        <a href="" id="createTutorials">Create a External Tutorial</a>
+        <a href="CreateAExternalTut.php" id="createTutorials">Create a External Tutorial</a>
       </div>
       <div id="CreateaTutorial" >
         <a href="" id="createTutorials">Create a Internal Tutorial</a>
