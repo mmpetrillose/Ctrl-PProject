@@ -104,7 +104,7 @@ $ExternalLink= $_POST["ExternalLink"];
         <a href="CreateAExternalTut.php" id="createTutorials">Create a External Tutorial</a>
       </div>
       <div id="CreateaTutorial" >
-        <a href="" id="createTutorials">Create a Internal Tutorial</a>
+        <a href="CreateAInternalTut.php" id="createTutorials">Create a Internal Tutorial</a>
       </div>
     </div> 
     <div id="content">
