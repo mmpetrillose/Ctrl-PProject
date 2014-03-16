@@ -30,10 +30,10 @@
     </div>
     <div id="tutorialOptions">
     <div id="ViewExternTut" >
-        <a href="" id="ExternalTutorials">View External Tutorials</a>
+        <a href="ViewListExternal.php" id="ExternalTutorials">View External Tutorials</a>
       </div>
        <div id="ViewInternTut" >
-        <a href="" id="InternalTutorials">View Internal Tutorials</a>
+        <a href="ViewListInternal.php" id="InternalTutorials">View Internal Tutorials</a>
       </div>
        <div id="CreateaTutorial" >
         <a href="CreateAExternalTut.php" id="createTutorials">Create a External Tutorial</a>
