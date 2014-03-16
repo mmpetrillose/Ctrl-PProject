@@ -125,7 +125,7 @@ $(function(){
       </div>
     </div> 
     <div id="content">
-    <h1> Create A External Tutorial:</h1>
+    <h1> Create A Internal Tutorial:</h1>
    A Internal tutorial is a tutorial that is created by Ctrl-p's users. Users can submit tutorials on all different topics.  
      <h3> Please Fill in all the fields below:</h3>
      <?php if (!isset($_POST['btnSubmit'])) {?>
