@@ -88,3 +88,13 @@ background:#dddddd;
 width:300px;
 
 }
+
+#Tutormalong{
+float:left;
+border:2px solid;
+border-radius:25px;
+margin-left:10px;
+padding:10px 40px; 
+background:#dddddd;
+width:800px;
+}

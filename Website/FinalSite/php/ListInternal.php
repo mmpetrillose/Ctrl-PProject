@@ -12,7 +12,7 @@
 	$NumRecords= mysql_num_rows($results);
 	
 	while($row=mysql_fetch_array($result)){
-		echo "<div id=\"Tutorma\">";
+		echo "<div id=\"Tutormalong\">";
 		echo "<h3> Title: ";
 		echo "<a href=\"viewInternTut.php?tutid='".$rows["idTutorialLink"]."'\">";
 		echo $rows["title"]."</a></h3><br>"; 

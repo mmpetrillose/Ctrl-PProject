@@ -17,7 +17,7 @@
 	$result = mysql_query($query) or die ("Error in query: $query.".mysql_error());
 	
 	while($row=mysql_fetch_array($result)){
-	    echo "<div id=\"Tutorma\">";
+	    echo "<div id=\"Tutormalong\">";
 		echo "<h3> Title: ";
 		echo "<a href=\"ViewExterTut.php?tutid='".$rows["idTutorialLink"]."'\">";
 		echo $rows["title"]."</a></h3>";
