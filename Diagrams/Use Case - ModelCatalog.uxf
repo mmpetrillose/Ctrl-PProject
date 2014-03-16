@@ -15,8 +15,8 @@
   <element>
     <type>com.umlet.element.Actor</type>
     <coordinates>
-      <x>460</x>
-      <y>310</y>
+      <x>1070</x>
+      <y>230</y>
       <w>100</w>
       <h>120</h>
     </coordinates>
@@ -131,40 +131,40 @@ User</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>360</x>
-      <y>240</y>
-      <w>140</w>
-      <h>120</h>
+      <x>900</x>
+      <y>180</y>
+      <w>210</w>
+      <h>100</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>30;30;120;100</additional_attributes>
+    <additional_attributes>30;30;190;80</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>360</x>
-      <y>310</y>
-      <w>140</w>
+      <x>900</x>
+      <y>230</y>
+      <w>210</w>
       <h>50</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>30;30;120;30</additional_attributes>
+    <additional_attributes>30;30;190;30</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>360</x>
-      <y>310</y>
-      <w>140</w>
-      <h>120</h>
+      <x>900</x>
+      <y>230</y>
+      <w>210</w>
+      <h>100</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>30;100;120;30</additional_attributes>
+    <additional_attributes>30;80;190;30</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.UseCase</type>
     <coordinates>
-      <x>530</x>
+      <x>510</x>
       <y>180</y>
       <w>120</w>
       <h>40</h>
@@ -178,11 +178,59 @@ User</panel_attributes>
     <coordinates>
       <x>360</x>
       <y>150</y>
-      <w>190</w>
+      <w>170</w>
       <h>70</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 &lt;&lt;includes&gt;&gt;</panel_attributes>
-    <additional_attributes>170;50;30;50</additional_attributes>
+    <additional_attributes>150;50;30;50</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>790</x>
+      <y>160</y>
+      <w>160</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>Model Catalog</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.UseCase</type>
+    <coordinates>
+      <x>810</x>
+      <y>190</y>
+      <w>120</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Download
+Design
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.UseCase</type>
+    <coordinates>
+      <x>810</x>
+      <y>240</y>
+      <w>120</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Find
+Print Loc.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.UseCase</type>
+    <coordinates>
+      <x>810</x>
+      <y>290</y>
+      <w>120</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Find
+Materials</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>

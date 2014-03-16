@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="12.2">
+  <zoom_level>6</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>642</x>
+      <y>78</y>
+      <w>126</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>_User Profile_
+--
+Profile for a User</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>474</x>
+      <y>168</y>
+      <w>126</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>_User View_
+--
+View that a logged in
+user views</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>636</x>
+      <y>168</y>
+      <w>126</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>_Public View_
+--
+Public view of user profile</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>792</x>
+      <y>168</y>
+      <w>126</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>_Follower View_
+--
+View displayed to followers</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>294</x>
+      <y>288</y>
+      <w>126</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>_UV: Edit Profile_
+--
+User edits own profile</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>426</x>
+      <y>234</y>
+      <w>126</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>_Private Info_
+--
+Private account info</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>600</x>
+      <y>240</y>
+      <w>126</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>_Public Info_
+--
+Public account info</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>774</x>
+      <y>240</y>
+      <w>126</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>_Follower Info_
+--
+Info visible to followers</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>426</x>
+      <y>342</y>
+      <w>126</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>_User Models_
+--
+Models submitted by user
+(From Catalog)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>774</x>
+      <y>342</y>
+      <w>126</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>_User Ratings_
+--
+Ratings given to users</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>468</x>
+      <y>78</y>
+      <w>126</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>_Authentication_
+--
+Authentication level</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
