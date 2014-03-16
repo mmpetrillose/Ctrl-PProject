@@ -13,7 +13,7 @@
 	while($row = mysql_fetch_array($result)){
 		echo "<div id=\"Tutorma\">";
 		echo "<h3> Title: ";
-		echo "<a href=\"viewExterTut.php?tutid='".$rows["idTutorialLink"]."'\">";
+		echo "<a href=\"viewInternTut.php?tutid='".$rows["idTutorialLink"]."'\">";
 		echo $rows["title"]."</a></h3>"; 
 		echo "<h4> Author: ".$rows["user_name"]."</h4>";  
 		echo "<h4> Positive Rating: ".$rows["rep_pos"]. "</h4>";
