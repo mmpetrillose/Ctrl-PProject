@@ -1,11 +1,10 @@
 <?php
-	Session_start();
-	$user=$SESSION['login_user'];
+include('php/sql_config.php');
+Session_start();
+$user=$_SESSION['login_user'];
+session_write_close();
 
 if (isset($_POST['btnSubmit'])) {
-	
-   include('php/sql_config.php');
-	session_start();
     
     $sql="SELECT idUsers FROM Users WHERE `user_name`='$user';";
     $Userid=mysql_query($sql) or die ($error = mysql_error());
