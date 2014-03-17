@@ -190,6 +190,9 @@ CREATE TABLE IF NOT EXISTS `ctrlp`.`Tutorials` (
   `rep_pos` INT NOT NULL DEFAULT 0,
   `rep_neg` INT NOT NULL DEFAULT 0,
   `tutorial_views` INT NOT NULL,
+  `tuttype` TINYINT(1) NOT NULL DEFAULT 0,
+  `summary` VARCHAR(255) NOT NULL,
+  `link` VARCHAR(255),
   PRIMARY KEY (`idTutorials`),
   CONSTRAINT `fk_Tutorial_Users1`
     FOREIGN KEY (`Users_idUsers`)
@@ -391,6 +394,7 @@ CREATE TABLE IF NOT EXISTS `ctrlp`.`Services` (
   `service_title` VARCHAR(255) NOT NULL,
   `service_comment` VARCHAR(511) NOT NULL,
   `post_date` DATETIME NOT NULL,
+  `printloca` TINYINT(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`idServices`),
   CONSTRAINT `fk_Services_Users1`
     FOREIGN KEY (`Users_idUsers`)
@@ -484,30 +488,6 @@ ENGINE = InnoDB;
 CREATE INDEX `fk_StepEdits_Step1_idx` ON `ctrlp`.`StepEdits` (`Step_idSteps` ASC);
 
 CREATE INDEX `fk_StepEdits_Users1_idx` ON `ctrlp`.`StepEdits` (`Users_idUsers` ASC);
-
-
--- -----------------------------------------------------
--- Table `ctrlp`.`TutorialLink`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `ctrlp`.`TutorialLink` ;
-
-CREATE TABLE IF NOT EXISTS `ctrlp`.`TutorialLink` (
-  `idTutorialLink` INT NOT NULL AUTO_INCREMENT,
-  `Users_idUsers` INT NOT NULL,
-  `title` VARCHAR(255) NOT NULL,
-  `summary` VARCHAR(511) NOT NULL,
-  `post_date` DATETIME NOT NULL,
-  `link` VARCHAR(511) NOT NULL,
-  PRIMARY KEY (`idTutorialLink`),
-  CONSTRAINT `fk_TutorialLink_Users1`
-    FOREIGN KEY (`Users_idUsers`)
-    REFERENCES `ctrlp`.`Users` (`idUsers`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-CREATE INDEX `fk_TutorialLink_Users1_idx` ON `ctrlp`.`TutorialLink` (`Users_idUsers` ASC);
-
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;

@@ -17,11 +17,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     if($passhash==$mypassword)
     {
         $_SESSION['login_user']=$myusername;
-        header("location: profile.php?user=$myusername");
+        header("location: profile.php?user=$myusername#");
     }
     else
     {
-        $error="Your Username or Password is invalid.";
+        $differror="Your Username or Password is invalid.";
     }
 }
 ?>
@@ -31,20 +31,20 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 </head>
 <body>
 	<?php
-		if(isset($error)) echo "$error";
+		if(isset($differror)) echo "$differror";
 	?>
   <form action="" method="POST">
-  <div id="username">
-    <label for="login">Username</label><br/>
-    <input type="text" id="login" name="login" value="" />
-  </div>
-  <div id="password">
-    <label for="password">Password</label><br/>
-    <input type="password" id="password" name="password" value="" />
-  </div>
-  <div id="submital">
-    <input type="submit" value="Login" />
-  </div>
+    <div id="username">
+      <label for="login">Username</label><br/>
+      <input type="text" id="login" name="login" value="" />
+    </div>
+    <div id="password">
+      <label for="password">Password</label><br/>
+      <input type="password" id="password" name="password" value="" />
+    </div>
+    <div id="submital">
+      <input type="submit" value="Login" />
+    </div>
   </form>
 </body>
 </html>

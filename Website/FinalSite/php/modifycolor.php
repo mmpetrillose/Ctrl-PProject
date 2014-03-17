@@ -15,7 +15,7 @@
 </head>
 <body>
     <div id="modify">
-        <a href="profile.php?user=<?php echo $profilePage?>&edit=true" id="modifyBtn">Modify</a>
+        <a href="editprofile.php?user=<?php echo $profilePage?>">Modify</a>
     </div>
 </body>
 </html>

@@ -43,7 +43,9 @@
 </head>
 <body>
   <?php include('php/useridentpanel.php');?>
+
   <?php include('php/usersummary.php');?>
+  
   <?php
     if(isset($login_session))
     {
