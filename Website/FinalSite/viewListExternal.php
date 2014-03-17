@@ -30,23 +30,10 @@
     </div>
     <div id="tutorialOptions">
     <div id="ViewExternTut" >
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <a href="" id="ExternalTutorials">View External Tutorials</a>
-      </div>
-       <div id="ViewInternTut" >
-        <a href="" id="InternalTutorials">View Internal Tutorials</a>
-=======
-=======
->>>>>>> b6624d468580f35a46ddeb5d349342b96e9b9687
         <a href="ViewListExternal.php" id="ExternalTutorials">View External Tutorials</a>
       </div>
        <div id="ViewInternTut" >
         <a href="ViewListInternal.php" id="InternalTutorials">View Internal Tutorials</a>
-<<<<<<< HEAD
->>>>>>> b6624d468580f35a46ddeb5d349342b96e9b9687
-=======
->>>>>>> b6624d468580f35a46ddeb5d349342b96e9b9687
       </div>
        <div id="CreateaTutorial" >
         <a href="CreateAExternalTut.php" id="createTutorials">Create a External Tutorial</a>
@@ -56,15 +43,7 @@
       </div>
     </div> 
     <div id="content">
-<<<<<<< HEAD
-<<<<<<< HEAD
-     <h2> External Tutorials</h2>
-=======
       <h2>External Tutorials</h2>
->>>>>>> b6624d468580f35a46ddeb5d349342b96e9b9687
-=======
-      <h2>External Tutorials</h2>
->>>>>>> b6624d468580f35a46ddeb5d349342b96e9b9687
      <h4> Define: External tutorials are tutorials that Ctrl-P users found that was created/posted on a external source such as YouTube. The Ctrl-P users submited these tutorials becuase that thought that other users would find them as helpful as they found them.</h4>
         <?php include('php/ListExternal.php');?>
         
