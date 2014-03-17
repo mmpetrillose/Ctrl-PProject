@@ -47,22 +47,6 @@
   <?php include('php/usersummary.php');?>
   
   <?php
-    if(isset($login_session))
-    {
-      if($login_session==$profilePage)
-      {
-        include('php/collabchat.php');
-      }
-      else
-      {
-        if($crowcount==2)
-        {
-          include('php/collabchat.php');
-        }
-      }
-    }
-  ?>
-  <?php
     $query="SELECT *
             FROM Users JOIN Downloads
             ON Downloads.Users_idUsers=Users.idUsers

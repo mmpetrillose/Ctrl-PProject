@@ -15,7 +15,7 @@
         <a href="TutorialMain.php" id="tutorial">Tutorial</a>
       </div>
       <div id="search">
-        <input type="text" size="35" placeholder="Search..." />
+        
       </div>
       <div id="profile" class="inset-text-grey">
         <?php include('php/accountcontrol.php');?>

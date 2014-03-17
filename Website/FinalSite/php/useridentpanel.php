@@ -31,6 +31,19 @@
 	$row=mysql_fetch_array($result);
 	$comrating=$row['rating'];
 
+  $query="SELECT idUsers FROM Users WHERE user_name='$profilePage';";
+  $result=mysql_query($query);
+  $row=mysql_fetch_array($result);
+  $cid=$row['idUsers'];
+
+  $query="SELECT * 
+          FROM Users JOIN Collaborators
+          ON Users.idUsers=Collaborators.Users_idUsers
+          WHERE user_name='$login_session' AND collab_id='$cid';";
+  $result=mysql_query($query);
+  $clist=mysql_num_rows($result);
+
+  session_write_close();
 ?>
 <html>
 <head>
@@ -50,6 +63,10 @@
     			include('php/logout.php');
     			include('php/modifycolor.php');
     		}
+        if($login_session!=$profilePage && $clist==0)
+        {
+          include('php/collaboption.php');
+        }
     	?>
     </div>
 </body>
