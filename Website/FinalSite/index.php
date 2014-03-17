@@ -10,19 +10,13 @@
   <?php include('php/header.php');?>
 
   <div id="content">
-    <div id="slideshow">
-      Slideshow Here
+    <div id="slideshow" style="content: url(./img/Front.jpg);">
     </div>
-    <div id="featDownload" class="inset-text-white">
-      <h1  class="inset-text-white">Feature Download</h1>
-      <?php include('php/featdown.php');?>
-    </div>
-    <div id="featTutorial">
-      <h1  class="inset-text-white">Feature Tutorial</h1>
-      <?php include('php/feattut.php');?>
-    </div>
-
-    <?php include('php/popups.php');?>
+      <?php
+        include('php/featdown.php');
+        include('php/feattut.php');
+        include('php/popups.php');
+      ?>
   </div>
 
   <?php include('php/footer.php');?>
