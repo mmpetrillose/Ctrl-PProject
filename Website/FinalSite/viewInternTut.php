@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> b6624d468580f35a46ddeb5d349342b96e9b9687
 <?php
 include('php/sql_config.php');
 	session_start();
@@ -5,6 +10,10 @@ $Tutorialid=$_GET['tutid'];
 $_SESSION['tutorialID'] = $Tutorialid;
 ?>
 
+<<<<<<< HEAD
+>>>>>>> b6624d468580f35a46ddeb5d349342b96e9b9687
+=======
+>>>>>>> b6624d468580f35a46ddeb5d349342b96e9b9687
 <!doctype html>
 <html>
 <head>
@@ -20,7 +29,15 @@ $_SESSION['tutorialID'] = $Tutorialid;
 <body>
 <div id="wrapper" class="clearfix">
     <div id="header">
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <div id="homeDiv" class="inset-text-grey">
+=======
        <div id="homeDiv" class="inset-text-grey">
+>>>>>>> b6624d468580f35a46ddeb5d349342b96e9b9687
+=======
+       <div id="homeDiv" class="inset-text-grey">
+>>>>>>> b6624d468580f35a46ddeb5d349342b96e9b9687
         <a href="index.php" id="home">Ctrl-P</a>
       </div>
       <div id="catalogDiv" class="inset-text-grey">
@@ -37,11 +54,25 @@ $_SESSION['tutorialID'] = $Tutorialid;
       </div>
     </div>
     <div id="tutorialOptions">
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <div id="ViewExternTut" >
+        <a href="" id="ExternalTutorials">View External Tutorials</a>
+      </div>
+       <div id="ViewInternTut" >
+        <a href="" id="InternalTutorials">View Internal Tutorials</a>
+=======
+=======
+>>>>>>> b6624d468580f35a46ddeb5d349342b96e9b9687
    <div id="ViewExternTut" >
         <a href="ViewListExternal.php" id="ExternalTutorials">View External Tutorials</a>
       </div>
        <div id="ViewInternTut" >
         <a href="ViewListInternal.php" id="InternalTutorials">View Internal Tutorials</a>
+<<<<<<< HEAD
+>>>>>>> b6624d468580f35a46ddeb5d349342b96e9b9687
+=======
+>>>>>>> b6624d468580f35a46ddeb5d349342b96e9b9687
       </div>
        <div id="CreateaTutorial" >
         <a href="CreateAExternalTut.php" id="createTutorials">Create a External Tutorial</a>
@@ -52,10 +83,22 @@ $_SESSION['tutorialID'] = $Tutorialid;
     </div> 
     <div id="content">
      <h2> Internal Tutorial</h2>
+<<<<<<< HEAD
+<<<<<<< HEAD
+     <?php include('php/tutrating.php');?>
+     
+     <div id="Tutormalong">
+=======
+=======
+>>>>>>> b6624d468580f35a46ddeb5d349342b96e9b9687
      
      
      <div id="Tutormalong">
 	<?php include('php/tutrating.php');?>
+<<<<<<< HEAD
+>>>>>>> b6624d468580f35a46ddeb5d349342b96e9b9687
+=======
+>>>>>>> b6624d468580f35a46ddeb5d349342b96e9b9687
  	<?php include('php/displayintdata.php'); ?>  
      </div>
  

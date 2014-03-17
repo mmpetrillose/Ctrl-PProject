@@ -77,7 +77,15 @@ $ExternalLink= $_POST["ExternalLink"];
 <body>
 <div id="wrapper" class="clearfix">
     <div id="header">
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <div id="homeDiv" class="inset-text-grey">
+=======
        <div id="homeDiv" class="inset-text-grey">
+>>>>>>> b6624d468580f35a46ddeb5d349342b96e9b9687
+=======
+       <div id="homeDiv" class="inset-text-grey">
+>>>>>>> b6624d468580f35a46ddeb5d349342b96e9b9687
         <a href="index.php" id="home">Ctrl-P</a>
       </div>
       <div id="catalogDiv" class="inset-text-grey">

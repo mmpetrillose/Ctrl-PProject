@@ -5,7 +5,14 @@
 <title>Ctrl-P</title>
 <link href="css/main.css" rel="stylesheet" type="text/css">
 <link href="css/overlay.css" rel="stylesheet" type="text/css">
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 <link href="css/tutorial.css" rel="stylesheet" type="text/css" />
+>>>>>>> b6624d468580f35a46ddeb5d349342b96e9b9687
+=======
+<link href="css/tutorial.css" rel="stylesheet" type="text/css" />
+>>>>>>> b6624d468580f35a46ddeb5d349342b96e9b9687
 <script src="js/JQuery1_11_0.js"></script>
 <script src="js/search.js"></script>
 </head>
