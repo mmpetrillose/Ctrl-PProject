@@ -7,12 +7,12 @@
 	include('php/sql_config.php');
 	
 	//create query
-	$query = "SELECT mod.idModels, modUsers.user_name, mod.model_title, mod.upload_date, mod.model_description
-			FROM ctrlp.Models AS mod
-			JOIN ctrlp.Users AS modUsers ON mod.Users_idUsers = modUsers.idUsers
-			JOIN ctrlp.ModelCategories AS cat ON mod.ModelCategories_idModelCategories = cat.idModelCategories
-			where cat.idModelCategories='1'
-			ORDER BY mod.upload_date DESC 
+	$query = "SELECT ctrlp.Models.idModels, ctrlp.Users.user_name, ctrlp.Models.model_title, ctrlp.Models.upload_date, ctrlp.Models.model_description
+			FROM ctrlp.Models
+			JOIN ctrlp.Users ON ctrlp.Models.Users_idUsers = ctrlp.Users.idUsers
+			JOIN ctrlp.ModelCategories ON ctrlp.Models.ModelCategories_idModelCategories = ctrlp.ModelCategories.idModelCategories
+			where ctrlp.ModelCategories.idModelCategories='1'
+			ORDER BY ctrlp.Models.upload_date DESC 
 		    limit 150;";
 	
 	//execute Query
