@@ -1,3 +1,15 @@
+<?php
+include('php/sql_config.php');
+$Modelid=$_GET['modid'];
+$_SESSION['modelID'] = $Modelid;
+
+//run update query
+$query= "UPDATE ctrlp.Models SET rep_pos=rep_pos+1 where idModels=$Modelid;";
+$result = mysql_query($query) or die ("Error in query: $query.".mysql_error());
+
+
+?>
+
 <!doctype html>
 <html>
 <head>
@@ -5,9 +17,10 @@
 <title>Ctrl-P</title>
 <link href="css/main.css" rel="stylesheet" type="text/css">
 <link href="css/overlay.css" rel="stylesheet" type="text/css">
-<link href="css/catalog.css" rel="stylesheet" type="text/css" />
+<link href="css/tutorial.css" rel="stylesheet" type="text/css" />
 <script src="js/JQuery1_11_0.js"></script>
 <script src="js/search.js"></script>
+
 </head>
 <body>
 <div id="wrapper" class="clearfix">
@@ -44,11 +57,17 @@
       <div id="PostALocation" >
         <a href="PostALocation.php" id="PostALocation">Post A Location</a>
       </div>
-    </div> 
+    </div>  
     <div id="content">
-	 <h2> Designs</h2>
-     <h4> Define: Designs are designs (or models) that Ctrl-P users have uploaded.</h4>
-        <?php include('php/ListDesigns.php');?>
+     <h2> Design</h2>
+     
+     
+     <div id="Designmalong">
+	<h3> Thanks for Rating this design we thank you for your time!</h3>
+	If you wish to go back to the design that you were just viewing 
+	<?php echo "<a href=\"ViewDesign.php?modid=".$Modelid."\">Click Here</a>";?>
+     </div>
+ 
         
            
         <a href="" class="overlay" id="loginForm"></a>
