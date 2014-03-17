@@ -12,14 +12,14 @@
 <body>
 <div id="wrapper" class="clearfix">
     <div id="header">
-      <div id="homeDiv" class="inset-text-grey">
+       <div id="homeDiv" class="inset-text-grey">
         <a href="index.php" id="home">Ctrl-P</a>
       </div>
       <div id="catalogDiv" class="inset-text-grey">
-        <a href="" id="catalog">Catalog</a>
+        <a href="CatalogMain.php" id="catalog">Catalog</a>
       </div>
       <div id="tutorialDiv"  class="inset-text-grey">
-        <a href="" id="tutorial">Tutorial</a>
+        <a href="TutorialMain.php" id="tutorial">Tutorial</a>
       </div>
       <div id="search">
         <input type="text" size="35" placeholder="Search..." />
@@ -29,13 +29,13 @@
       </div>
     </div>
     <div id="tutorialOptions">
-    <div id="ViewExternTut" >
+	  <div id="ViewExternTut" >
         <a href="ViewListExternal.php" id="ExternalTutorials">View External Tutorials</a>
       </div>
-       <div id="ViewInternTut" >
+      <div id="ViewInternTut" >
         <a href="ViewListInternal.php" id="InternalTutorials">View Internal Tutorials</a>
       </div>
-       <div id="CreateaTutorial" >
+      <div id="CreateaTutorial" >
         <a href="CreateAExternalTut.php" id="createTutorials">Create a External Tutorial</a>
       </div>
       <div id="CreateaTutorial" >
@@ -45,19 +45,22 @@
     <div id="content">
      
 
-      <div id="featDownload" class="inset-text-white">
+      <div id="featureTut" class="inset-text-white">
         <h1  class="inset-text-white">Feature Tutorials</h1>
         <?php include('php/FeatureTut.php');?>
                
       </div>
-      <div id="featTutorial">
+      <div id="newTut">
         <h1  class="inset-text-white">New Tutorials</h1>
         
         <h3 class="inset-text-white"> Internal Tutorials: These are tutorials that are created by you!</h3>
         <?php include('php/newInternTut.php');?>
         <h3 class="inset-text-white"> External Tutorials: These are tutorials that are from a outside source!</h3>
         <?php include('php/newExterTut.php');?>
-      </div>      
+      </div>  
+
+
+	  
         <a href="" class="overlay" id="loginForm"></a>
         <div class="popup inset-text-white centered" id="login">
           <?php include('php/loginpop.php');?>

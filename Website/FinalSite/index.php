@@ -5,6 +5,7 @@
 <title>Ctrl-P</title>
 <link href="css/main.css" rel="stylesheet" type="text/css">
 <link href="css/overlay.css" rel="stylesheet" type="text/css">
+<link href="css/tutorial.css" rel="stylesheet" type="text/css" />
 <script src="js/JQuery1_11_0.js"></script>
 <script src="js/search.js"></script>
 </head>
@@ -15,7 +16,7 @@
         <a href="index.php" id="home">Ctrl-P</a>
       </div>
       <div id="catalogDiv" class="inset-text-grey">
-        <a href="" id="catalog">Catalog</a>
+        <a href="CatalogMain.php" id="catalog">Catalog</a>
       </div>
       <div id="tutorialDiv"  class="inset-text-grey">
         <a href="TutorialMain.php" id="tutorial">Tutorial</a>

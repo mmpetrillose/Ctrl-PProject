@@ -1,3 +1,15 @@
+<?php
+include('php/sql_config.php');
+$Tutorialid=$_GET['tutid'];
+$_SESSION['tutorialID'] = $Tutorialid;
+
+//run update query
+$query= "UPDATE ctrlp.Tutorials SET rep_pos=rep_pos+1 where idTutorials=$Tutorialid;";
+$result = mysql_query($query) or die ("Error in query: $query.".mysql_error());
+
+
+?>
+
 <!doctype html>
 <html>
 <head>
@@ -8,11 +20,12 @@
 <link href="css/tutorial.css" rel="stylesheet" type="text/css" />
 <script src="js/JQuery1_11_0.js"></script>
 <script src="js/search.js"></script>
+
 </head>
 <body>
 <div id="wrapper" class="clearfix">
     <div id="header">
-      <div id="homeDiv" class="inset-text-grey">
+       <div id="homeDiv" class="inset-text-grey">
         <a href="index.php" id="home">Ctrl-P</a>
       </div>
       <div id="catalogDiv" class="inset-text-grey">
@@ -29,7 +42,7 @@
       </div>
     </div>
     <div id="tutorialOptions">
-    <div id="ViewExternTut" >
+   <div id="ViewExternTut" >
         <a href="ViewListExternal.php" id="ExternalTutorials">View External Tutorials</a>
       </div>
        <div id="ViewInternTut" >
@@ -43,9 +56,15 @@
       </div>
     </div> 
     <div id="content">
-      <h2>External Tutorials</h2>
-     <h4> Define: External tutorials are tutorials that Ctrl-P users found that was created/posted on a external source such as YouTube. The Ctrl-P users submited these tutorials becuase that thought that other users would find them as helpful as they found them.</h4>
-        <?php include('php/ListExternal.php');?>
+     <h2> Internal Tutorial</h2>
+     
+     
+     <div id="Tutormalong">
+	<h3> Thanks for Rating this tutorial we thank you for your time!</h3>
+	If you wish to go back to the tutorial that you were just viewing 
+	<?php echo "<a href=\"ViewInternTut.php?tutid=".$Tutorialid."\">Click Here</a>";?>
+     </div>
+ 
         
            
         <a href="" class="overlay" id="loginForm"></a>

@@ -12,6 +12,8 @@
 	padding-right: 5px;
 	padding-bottom: 5px;
 	padding-left: 5px;
+	margin-top:15px;
+	margin-right:5px;
 }
 #newTut {
 	width: 430px;
@@ -25,6 +27,7 @@
 	padding-right: 5px;
 	padding-bottom: 5px;
 	padding-left: 5px;
+	margin-top:15px;
 }
 #tutorialOptions{
 	font-size: medium;
@@ -86,6 +89,17 @@ border-radius:25px;
 padding:10px 40px; 
 background:#dddddd;
 width:300px;
+margin-bottom: 5px;
+
+}
+#TutormaFront{
+border:2px solid;
+border-radius:25px;
+padding:10px 40px; 
+background:#dddddd;
+width:325px;
+margin-bottom: 10px;
+margin-left:10px;
 
 }
 
@@ -97,5 +111,28 @@ margin-left:10px;
 padding:10px 40px; 
 background:#dddddd;
 width:800px;
+margin-bottom: 5px;
+
+}
+#TutormaStep{
+float:left;
+border:2px solid;
+border-radius:25px;
+margin-left:10px;
+padding:10px 40px; 
+background:#FFFFFF;
+width:500px;
+margin-bottom: 5px;
+
+}
+
+#alignRight{
+float:right;
+border:2px solid;
+border-radius:25px;
+margin-left:10px;
+padding:2px 20px; 
+background:#FFFFFF;
+
 
 }

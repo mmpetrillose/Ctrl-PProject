@@ -16,10 +16,10 @@
         <a href="index.php" id="home">Ctrl-P</a>
       </div>
       <div id="catalogDiv" class="inset-text-grey">
-        <a href="" id="catalog">Catalog</a>
+        <a href="CatalogMain.php" id="catalog">Catalog</a>
       </div>
       <div id="tutorialDiv"  class="inset-text-grey">
-        <a href="" id="tutorial">Tutorial</a>
+        <a href="TutorialMain.php" id="tutorial">Tutorial</a>
       </div>
       <div id="search">
         <input type="text" size="35" placeholder="Search..." />
@@ -30,10 +30,10 @@
     </div>
     <div id="tutorialOptions">
     <div id="ViewExternTut" >
-        <a href="" id="ExternalTutorials">View External Tutorials</a>
+        <a href="ViewListExternal.php" id="ExternalTutorials">View External Tutorials</a>
       </div>
        <div id="ViewInternTut" >
-        <a href="" id="InternalTutorials">View Internal Tutorials</a>
+        <a href="ViewListInternal.php" id="InternalTutorials">View Internal Tutorials</a>
       </div>
        <div id="CreateaTutorial" >
         <a href="CreateAExternalTut.php" id="createTutorials">Create a External Tutorial</a>
