@@ -1,18 +1,12 @@
-
 <?php 
-if($_SERVER["REQUEST_METHOD"] == "POST")
-{
 include('php/sql_config.php');
-session_start();
- $sql="SELECT idUsers FROM Users WHERE `user_name`='$current_user';";
- $Userid=mysql_query($sql) or die ($error = mysql_error());
- 
-if($_POST['submit']=="Submit")
+Session_start();
+$user=$_SESSION['login_user'];
+session_write_close();
+
+if($_POST['TutSubmit']=="submit")
 { 
 $errorMessage="";
-	if(empty($current_user)){
-		$errorMessage .="<li> You must be logged in to Create a Tutorial!</li>";
-	}
 	if(empty($_POST["ExternalTitle"])){
 		$errorMessage .="<li> You forgot to enter the Tutorial Title!</li>";
 	}
@@ -25,24 +19,39 @@ $errorMessage="";
 $ExternTitle = $_POST["ExternalTitle"];
 $ExternSummary=$_POST["ExternalSummary"];
 $ExternalLink= $_POST["ExternalLink"];
+$extCategory=$_POST["Category"];
 	if(!empty($errorMessage)){
-		echo("<p> there was an error with your form:</p>\n");
+		if(!empty($errorMessage)){
+		echo "<div id=\"ErrorColor\" >";
+		echo("<p> There was an error with your form:</p>\n");
 		echo("<ul>".$errorMessage."</ul>\n");
+		echo "</div>";
 	}else{
-		$SQL = "INSERT into ctrlp.TutorialLink( Users_idUsers, title, summary, 		
-				post_date, link) Values (".PrepSQL($Userid).",".
+	//Category stuff
+	$Catid = "select idTutorialCategories from ctrlp.TutorialCategories where category_title=$extCategory;";
+	$catResult=mysql_query($Catid) or die ($error = mysql_error());
+	
+		$SQL = "INSERT into ctrlp.Tutorials( Users_idUsers, 
+		TutorialCategories_idTutorialCategories, title, num_steps,
+		post_time, rep_por, rep_neg, tutorial_views, tuttype, summary, 		
+							link) Values (".PrepSQL($Userid).",".
+										   PrepSQL($catResult).",".
 										   PrepSQL($ExternTitle).",".
-										   PrepSQL($ExternSummary).",".
+										   PrepSQL(0).",".
 										   Now().",".
+										   PrepSQL(0).",".
+										   PrepSQL(0).",".
+										   PrepSQL(0).",".
+										   PrepSQL(1).",".
+										   PrepSQL($ExternalSummary).",".
 										   PrepSQL($ExternalLink).")";
 										   
-	$results=mysql_query($SQL);
+	$results=mysql_query($SQL)or die ($error = mysql_error());
 	if($results){
 		echo("<br> Tutorial was created!");
 	}else{
 		echo("<br> Tutorial was not created Please try again!");
 	}
-	
 	
 	function PrepSQL($value){
 		//Stripslaches
@@ -54,17 +63,12 @@ $ExternalLink= $_POST["ExternalLink"];
     $value = "'" . mysql_real_escape_string($value) . "'";
  
     return($value);
-} 
-		
-	}
-
-}
-}
+}}}}
 
 ?>
-
 <!doctype html>
 <html>
+<?php session_write_close();?>
 <head>
 <meta charset="utf-8">
 <title>Ctrl-P</title>
@@ -109,15 +113,42 @@ $ExternalLink= $_POST["ExternalLink"];
     </div> 
     <div id="content">
     <h1> Create A External Tutorial:</h1>
+	<?php 
+		include('php/sql_config.php');
+		$sql="SELECT idUsers FROM ctrlp.Users WHERE user_name='$user';";
+		$Userid=mysql_query($sql) or die ($error = mysql_error());
+		$errorMessageUser="";
+		if(empty($current_user)){
+		$errorMessageUser .="<li> You must be logged in to Create a Tutorial!</li>";
+		if(!empty($errorMessageUser)){
+		echo "<div id=\"ErrorColor\" >";
+		echo("<p> There was an error with your form:</p>\n");
+		echo("<ul>".$errorMessageUser."</ul>\n");
+		echo "</div>";
+		}}?>
+	
     A external Tutorial is any tutorial that was created using external resources such as youtube. Or was created by someone else but something that you thought was useful and want to share with other people. 
      <h3> Please Fill in all the fields below:</h3>
      <form method = "POST" action="">
      Tutorial Title:<input type="text" name="ExternalTitle" Size="75" maxlength="150"><br>
-     Brief Summary of Tutorial:<br> <textarea name="ExternalSummary" rows="5" cols="100" wrap="physical"></textarea><br>
-     Link:<input type="Text" name="ExternalLink"Size="85" ><br>
-     
-     <input type="submit" value="Submit" name="submit" />
+      Category: <select name = "Category"><?php 
+	 try{
+	 include('php/sql_config.php');
+     $query = mysql_query("Select category_title from ctrlp.TutorialCategories;");
+	 while ($row = mysql_fetch_array($query)){
+		 echo "<option value =\"".$row["category_title"]."\">".$row["category_title"]."</option>";
+	 }
+	 }catch(PDOException $e){
+		 echo 'No Results';
+	 }
+	 ?>
+	 Brief Summary of Tutorial:<br> <textarea name="ExternalSummary" rows="5" cols="100" wrap="physical"></textarea><br>
+     Link:<input type="Text" name="ExternalLink"Size="85" ><br><br>
+     <div id="buttonlook"><input type="submit" value="Submit" name="TutSubmit" /></div>
      </form>
+	 
+	 
+	 
        <a href="" class="overlay" id="loginForm"></a>
         <div class="popup inset-text-white centered" id="login">
           <?php include('php/loginpop.php');?>
