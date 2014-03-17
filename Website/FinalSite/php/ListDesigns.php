@@ -10,6 +10,8 @@
 	$query = "SELECT mod.idModels, modUsers.user_name, mod.model_title, mod.upload_date, mod.model_description
 			FROM ctrlp.Models AS mod
 			JOIN ctrlp.Users AS modUsers ON mod.Users_idUsers = modUsers.idUsers
+			JOIN ctrlp.ModelCategories AS cat ON mod.ModelCategories_idModelCategories = cat.idModelCategories
+			where ctrlp.ModelCategories='1'
 			ORDER BY mod.upload_date DESC 
 		    limit 150;";
 	
