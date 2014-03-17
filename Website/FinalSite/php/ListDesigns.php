@@ -11,7 +11,6 @@
 			FROM ctrlp.Models
 			JOIN ctrlp.Users ON ctrlp.Models.Users_idUsers = ctrlp.Users.idUsers
 			JOIN ctrlp.ModelCategories ON ctrlp.Models.ModelCategories_idModelCategories = ctrlp.ModelCategories.idModelCategories
-			where ctrlp.ModelCategories.idModelCategories='1'
 			ORDER BY ctrlp.Models.upload_date DESC 
 		    limit 150;";
 	
