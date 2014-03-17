@@ -1,16 +1,21 @@
 <?php
+	session_start();
+	$user=$SESSION['login_user'];
+?>
+
+<?php
 
 if (isset($_POST['btnSubmit'])) {
 	
    include('php/sql_config.php');
 	session_start();
     
-    $sql="SELECT idUsers FROM Users WHERE `user_name`='$current_user';";
+    $sql="SELECT idUsers FROM Users WHERE `user_name`='$user';";
     $Userid=mysql_query($sql) or die ($error = mysql_error());
 if($_POST['btnSubmit']=="Submit")
 { 
 $errorMessage="";
-	if(empty($current_user)){
+	if(empty($user)){
 		$errorMessage .="<li> You must be logged in to Post a Location!</li>";
 	}
 	if(empty($_POST["InternalTitle"])){
@@ -116,7 +121,7 @@ $(function(){
     </div>
     <div id="CatalogOptions">
     <div id="ListDesigns" >
-        <a href="ListDesigns.php" id="Designs">View Designs</a>
+        <a href="CatalogMain.php" id="Designs">View Designs</a>
       </div>
 	  <div id="UploadADesign" >
         <a href="UploadADesign.php" id="UploadDesign">Upload A Design</a>
@@ -142,9 +147,9 @@ $(function(){
 		 try{
 		 include('php/sql_config.php');
 		session_start();
-		 $query = mysql_query("Select category_title from ctrlp.ServiceCategories;");
+		 $query = mysql_query("Select printloca from ctrlp.ServiceCategories;");
 		 while ($row = mysql_fetch_array($query)){
-			 echo "<option value =\"".$row["category_title"]."\">".$row["category_title"]."</option>";
+			 echo "<option value =\"".$row["printloca"]."\">".$row["printloca"]."</option>";
 		 }
 		 }catch(PDOException $e){
 			 echo 'No Results';

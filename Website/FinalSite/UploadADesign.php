@@ -1,16 +1,21 @@
 <?php
+	session_start();
+	$user=$SESSION['login_user'];
+?>
+
+<?php
 
 if (isset($_POST['btnSubmit'])) {
 	
    include('php/sql_config.php');
 	session_start();
     
-    $sql="SELECT idUsers FROM Users WHERE `user_name`='$current_user';";
+    $sql="SELECT idUsers FROM Users WHERE `user_name`='$user';";
     $Userid=mysql_query($sql) or die ($error = mysql_error());
 if($_POST['btnSubmit']=="Submit")
 { 
 $errorMessage="";
-	if(empty($current_user)){
+	if(empty($user)){
 		$errorMessage .="<li> You must be logged in to Upload a Design!</li>";
 	}
 	if(empty($_POST["InternalTitle"])){
@@ -77,7 +82,6 @@ $InternalModelComment=$_POST["InternalModelComment"];
     
 }
 ?>
-
 
 
 <!doctype html>
