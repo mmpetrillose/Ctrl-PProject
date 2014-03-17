@@ -1,6 +1,6 @@
 <?php
 	Session_start();
-	$user=$SESSION['login_user'];
+	$user=$_SESSION['login_user'];
 
 if (isset($_POST['btnSubmit'])) {
 	
