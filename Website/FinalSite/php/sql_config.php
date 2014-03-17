@@ -1,6 +1,6 @@
 <?php
 $mysql_hostname = "localhost";
-$mysql_user = "phpuser";
+$mysql_user = "php_user";
 $mysql_password = "phpuserpassword";
 $mysql_database = "ctrlp";
 $bd = mysql_connect($mysql_hostname, $mysql_user, $mysql_password)
