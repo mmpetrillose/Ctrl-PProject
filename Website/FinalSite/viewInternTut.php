@@ -70,10 +70,10 @@ $_SESSION['tutorialID'] = $Tutorialid;
           <?php include('php/joinpop.php');?>
         </div>
     </div>
-    <div id="footer">
-      <a href="" id="about">About</a> |
-      <a href="" id="help">Help</a> |
-      <a href="" id="contactUs">Contact Us</a>
+   <div id="footer">
+      <a href="about.php" id="about">About</a> |
+      <a href="help.php" id="help">Help</a> |
+      <a href="contact.php" id="contactUs">Contact Us</a>
     </div>
 </div>
 </body>
