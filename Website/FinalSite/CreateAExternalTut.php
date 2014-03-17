@@ -2,11 +2,16 @@
 include('php/sql_config.php');
 Session_start();
 $user=$_SESSION['login_user'];
-session_write_close();
-
-if($_POST['TutSubmit']=="submit")
-{ 
-$errorMessage="";
+$query="SELECT public_summary FROM Users WHERE `user_name`='$user';";
+	$result=mysql_query($query);
+	$row=mysql_fetch_array($result);
+	
+if($_SERVER["REQUEST_METHOD"] == "POST")
+	{	
+$errorMessage="";	
+	if(empty($current_user)){
+		$errorMessage .="<li> You must be logged in to Create a Tutorial!</li>";
+		}
 	if(empty($_POST["ExternalTitle"])){
 		$errorMessage .="<li> You forgot to enter the Tutorial Title!</li>";
 	}
@@ -20,6 +25,7 @@ $ExternTitle = $_POST["ExternalTitle"];
 $ExternSummary=$_POST["ExternalSummary"];
 $ExternalLink= $_POST["ExternalLink"];
 $extCategory=$_POST["Category"];
+
 	if(!empty($errorMessage)){
 		if(!empty($errorMessage)){
 		echo "<div id=\"ErrorColor\" >";
@@ -30,11 +36,14 @@ $extCategory=$_POST["Category"];
 	//Category stuff
 	$Catid = "select idTutorialCategories from ctrlp.TutorialCategories where category_title=$extCategory;";
 	$catResult=mysql_query($Catid) or die ($error = mysql_error());
+	//userid 
+	$userquery ="SELECT idUsers FROM Users WHERE `user_name`='$user';";
+	$userid=mysql_query($userquery) or die ($error = mysql_error());
 	
 		$SQL = "INSERT into ctrlp.Tutorials( Users_idUsers, 
 		TutorialCategories_idTutorialCategories, title, num_steps,
 		post_time, rep_por, rep_neg, tutorial_views, tuttype, summary, 		
-							link) Values (".PrepSQL($Userid).",".
+							link) Values (".PrepSQL($userid).",".
 										   PrepSQL($catResult).",".
 										   PrepSQL($ExternTitle).",".
 										   PrepSQL(0).",".
@@ -113,20 +122,8 @@ $extCategory=$_POST["Category"];
     </div> 
     <div id="content">
     <h1> Create A External Tutorial:</h1>
-	<?php 
-		include('php/sql_config.php');
-		$sql="SELECT idUsers FROM ctrlp.Users WHERE user_name='$user';";
-		$Userid=mysql_query($sql) or die ($error = mysql_error());
-		$errorMessageUser="";
-		if(empty($current_user)){
-		$errorMessageUser .="<li> You must be logged in to Create a Tutorial!</li>";
-		if(!empty($errorMessageUser)){
-		echo "<div id=\"ErrorColor\" >";
-		echo("<p> There was an error with your form:</p>\n");
-		echo("<ul>".$errorMessageUser."</ul>\n");
-		echo "</div>";
-		}}?>
 	
+	<?php if (!isset($_POST['TutSubmit'])){?>
     A external Tutorial is any tutorial that was created using external resources such as youtube. Or was created by someone else but something that you thought was useful and want to share with other people. 
      <h3> Please Fill in all the fields below:</h3>
      <form method = "POST" action="">
@@ -147,7 +144,7 @@ $extCategory=$_POST["Category"];
      <div id="buttonlook"><input type="submit" value="Submit" name="TutSubmit" /></div>
      </form>
 	 
-	 
+	 <?php }?>
 	 
        <a href="" class="overlay" id="loginForm"></a>
         <div class="popup inset-text-white centered" id="login">
@@ -159,9 +156,9 @@ $extCategory=$_POST["Category"];
         </div>
     </div>
     <div id="footer">
-      <a href="" id="about">About</a> |
-      <a href="" id="help">Help</a> |
-      <a href="" id="contactUs">Contact Us</a>
+      <a href="about.php" id="about">About</a> |
+      <a href="help.php" id="help">Help</a> |
+      <a href="contact.php" id="contactUs">Contact Us</a>
     </div>
 </div>
 </body>
