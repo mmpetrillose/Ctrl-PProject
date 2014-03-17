@@ -166,3 +166,9 @@ INSERT INTO `ctrlp`.`ModelPictures` (`Models_idModels`, `picture_location`, `pic
 INSERT INTO `ctrlp`.`ModelPictures` (`Models_idModels`, `picture_location`, `picture_title`, `picture_comment`, `upload_date`) VALUES ('1', '/place/place2', 'Something02', 'something02', '2014-02-01 10:11:11');
 INSERT INTO `ctrlp`.`ModelPictures` (`Models_idModels`, `picture_location`, `picture_title`, `picture_comment`, `upload_date`, `main_photo`) VALUES ('2', '/place2/place', 'Something03', 'something03', '2014-02-01 10:11:12', '1');
 INSERT INTO `ctrlp`.`ModelPictures` (`Models_idModels`, `picture_location`, `picture_title`, `picture_comment`, `upload_date`, `main_photo`) VALUES ('3', '/place3/place', 'Something04', 'something04', '2014-02-01 10:11:13', '1');
+
+INSERT INTO `ctrlp`.`Services` (`Users_idUsers`, `ServiceCategories_idServiceCategories`, `service_title`, `post_date`, `printloca`) VALUES ('1', '1', 'Materials for Sale', '2014-02-01 10:10:10', '0');
+INSERT INTO `ctrlp`.`Services` (`Users_idUsers`, `ServiceCategories_idServiceCategories`, `service_title`, `post_date`, `printloca`) VALUES ('1', '0', 'Printers R Us', '2014-02-01 10:10:12', '0');
+
+INSERT INTO `ctrlp`.`ContactInfo` (`Services_idServices`, `alternate_email`, `address`, `phone`) VALUES ('1', 'materials@gmail.com', 'Boston, MA', '123-456-7890');
+INSERT INTO `ctrlp`.`ContactInfo` (`Services_idServices`, `alternate_email`, `address`, `phone`) VALUES ('0', 'printers@gmail.com', 'NYC, NY', '223-456-7890');

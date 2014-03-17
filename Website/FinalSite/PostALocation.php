@@ -1,9 +1,6 @@
 <?php
-	session_start();
+	Session_start();
 	$user=$SESSION['login_user'];
-?>
-
-<?php
 
 if (isset($_POST['btnSubmit'])) {
 	
