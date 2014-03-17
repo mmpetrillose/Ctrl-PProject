@@ -1,10 +1,11 @@
 <?php
 include('php/sql_config.php');
 Session_start();
-$user=$_SESSION['login_user'];
-session_write_close();
+
 
 if (isset($_POST['btnSubmit'])) {
+	$user=$_SESSION['login_user'];
+	session_write_close();
 	 
     $sql="SELECT idUsers FROM Users WHERE `user_name`='$user';";
     $Userid=mysql_query($sql) or die ($error = mysql_error());
@@ -162,7 +163,7 @@ $(function(){
 	 ?>
      </select>
      <div id="container">
-      <p id="add_field"><a href="#"><span>&raquo; Add contact information to your Location</span></a></p>
+      <p id="add_field"><a href="#"><span>&raquo; Enter your file here:</span></a></p>
         </div>
       <input id ="go" name="btnSubmit" type="submit" />
       </form>
