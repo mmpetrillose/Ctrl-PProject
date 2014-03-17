@@ -11,7 +11,7 @@
 			FROM ctrlp.Models AS mod
 			JOIN ctrlp.Users AS modUsers ON mod.Users_idUsers = modUsers.idUsers
 			JOIN ctrlp.ModelCategories AS cat ON mod.ModelCategories_idModelCategories = cat.idModelCategories
-			where mod.ModelCategories='1'
+			where mod.ModelCategories_idModelCategories='1'
 			ORDER BY mod.upload_date DESC 
 		    limit 150;";
 	
