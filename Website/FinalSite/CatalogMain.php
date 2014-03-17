@@ -30,7 +30,7 @@
     </div>
     <div id="CatalogOptions">
     <div id="ListDesigns" >
-        <a href="ListDesigns.php" id="Designs">View Designs</a>
+        <a href="CatalogMain.php" id="Designs">View Designs</a>
       </div>
 	  <div id="UploadADesign" >
         <a href="UploadADesign.php" id="UploadDesign">Upload A Design</a>
