@@ -1,70 +1,80 @@
-<?php
+<?php 
+include('php/sql_config.php');
+Session_start();
+if(isset($_POST['TutSubmit'])){ 
+$user=$_SESSION['login_user'];
+session_write_close();
 
-if (isset($_POST['btnSubmit'])) {
+		$sql="SELECT idUsers FROM ctrlp.Users WHERE user_name='$user';";
+		$Userid=mysql_query($sql) or die ($error = mysql_error());
 	
-   include('php/sql_config.php');
-	session_start();
-    
-    $sql="SELECT idUsers FROM Users WHERE `user_name`='$current_user';";
-    $Userid=mysql_query($sql) or die ($error = mysql_error());
-if($_POST['btnSubmit']=="Submit")
-{ 
-$errorMessage="";
+if($_POST['TutSubmit']=="Submit"){	
+$errorMessage="";	
 	if(empty($current_user)){
 		$errorMessage .="<li> You must be logged in to Create a Tutorial!</li>";
-	}
-	if(empty($_POST["InternalTitle"])){
+		}
+	if(empty($_POST["ExternalTitle"])){
 		$errorMessage .="<li> You forgot to enter the Tutorial Title!</li>";
 	}
-$InternalTitle = $_POST["InteralTitle"];
-$InCategory=$_POST["Category"];
+	if(empty($_POST["ExternalSummary"])){
+		$errorMessage .="<li> You forgot to enter the Tutorial Summary!</li>";
+	}
+	
+$InternTitle = $_POST["Internaltitle"];
+$InternSummary=$_POST["InternalSummary"];
+$inCategory=$_POST["Category"];
 
-	if(!empty($errorMessage)){
-		echo("<p> there was an error with your form:</p>\n");
+if(!empty($errorMessage)){
+		if(!empty($errorMessage)){
+		echo "<div id=\"ErrorColor\" >";
+		echo("<p> There was an error with your form:</p>\n");
 		echo("<ul>".$errorMessage."</ul>\n");
+		echo "</div>";
 	}else{
-		$Catid = "select idTutorialCategories from ctrlp.TutorialCategories where `category_title`='$InCategory';";
-		$catResult=mysql_query($Catid) or die ($error = mysql_error());
-		$sqlTutorials = "INSERT into ctrlp.Tutorials( Users_idUsers, TutorialCategories_idTutorialCatergories, title, num_steps,  		
-				post_time) Values (".PrepSQL($Userid).",".
-									PrepSQL($catResult).",".
-									PrepSQL($InternalTitle).",".
-									PrepSQL(count($_POST['fields'])).",".
-									Now().")";								   
-	$results=mysql_query($sqlTutorials);
+	//Category stuff
+	$Catid = "select idTutorialCategories from ctrlp.TutorialCategories where category_title=$extCategory;";
+	$catResult=mysql_query($Catid) or die ($error = mysql_error());
+	
+		$SQL = "INSERT into ctrlp.Tutorials( Users_idUsers, 
+		TutorialCategories_idTutorialCategories, title, num_steps,
+		post_time, rep_por, rep_neg, tutorial_views, tuttype, summary, 		
+							link) Values (".PrepSQL($Userid).",".
+										   PrepSQL($catResult).",".
+										   PrepSQL($InternTitle).",".
+										   PrepSQL(0).",".
+										   Now().",".
+										   PrepSQL(0).",".
+										   PrepSQL(0).",".
+										   PrepSQL(0).",".
+										   PrepSQL(0).",".
+										   PrepSQL($InternSummary).")";
+										   
+	$results=mysql_query($SQL)or die ($error = mysql_error());
 	if($results){
-		$tutid = "select idtutorial from ctrlp.Tutorials where `title`='$InternalTitle';";
-		$ResultstutID= mysql_query($tutid) or die ($error = mysql_error());	
-    if ($_POST['fields']) {    
-	$count =0;
-        foreach($_POST['fields'] as $tutvalue) {
-			$count++;
-		 $stepsql= "INSERT into ctrlp.( Tutorials_idTutorials, Users_idUsers, media_title, media_location) Values (".PrepSQL($ResultstutID).",".
-									PrepSQL($Userid).",".
-									PrepSQL($count).",".
-									PrepSQL(mysql_real_escape_string($tutvalue)).")";      
-		$stepsqlresult=mysql_query($stepsql) or die ($error = mysql_error());
-							
-        }  
-    } else{}
-    echo "<h1> User Added, <strong>";
-	echo count($_POST['fields']);
-	echo "</strong> website(s) added for this user!</h1>";
+	//add the steps to the database
+	
+	
+	
+	
+	
+	
+		echo("<br> Tutorial was created!");
 	}else{
 		echo("<br> Tutorial was not created Please try again!");
 	}
 	
-	
 	function PrepSQL($value){
-		if(get_magic_quotes_gpc()) {
+		//Stripslaches
+		if(get_magic_quotes_gpc()) 
+    {
         $value = stripslashes($value);
     }
+    // Quote
     $value = "'" . mysql_real_escape_string($value) . "'";
+ 
     return($value);
-}}}
-    
-    
-}
+}}}}}
+
 ?>
 
 <!doctype html>
@@ -128,13 +138,14 @@ $(function(){
     <h1> Create A Internal Tutorial:</h1>
    A Internal tutorial is a tutorial that is created by Ctrl-p's users. Users can submit tutorials on all different topics.  
      <h3> Please Fill in all the fields below:</h3>
-     <?php if (!isset($_POST['btnSubmit'])) {?>
+     
+	 
+	 <?php if (!isset($_POST['btnSubmit'])) {?>
      <form name = "test" method ="post" action="">
      Title: <input type="text" name="Internaltitle" id="internalTitle"  size="75"/><br>
      Category: <select name = "Category"><?php 
 	 try{
 	 include('php/sql_config.php');
-	session_start();
      $query = mysql_query("Select category_title from ctrlp.TutorialCategories;");
 	 while ($row = mysql_fetch_array($query)){
 		 echo "<option value =\"".$row["category_title"]."\">".$row["category_title"]."</option>";
@@ -143,13 +154,15 @@ $(function(){
 		 echo 'No Results';
 	 }
 	 ?>
-     </select>
+     </select><br>
+	 Brief Summary of Tutorial:<br> <textarea name="InternalSummary" rows="5" cols="100" wrap="physical"></textarea><br>
      <div id="container">
       <p id="add_field"><a href="#"><span>&raquo; Add a Step to your Tutorial</span></a></p>
         </div>
       <input id ="go" name="btnSubmit" type="submit" />
       </form>
 	<?php }?>
+	
        <a href="" class="overlay" id="loginForm"></a>
         <div class="popup inset-text-white centered" id="login">
           <?php include('php/loginpop.php');?>
@@ -160,9 +173,9 @@ $(function(){
         </div>
     </div>
     <div id="footer">
-      <a href="" id="about">About</a> |
-      <a href="" id="help">Help</a> |
-      <a href="" id="contactUs">Contact Us</a>
+      <a href="about.php" id="about">About</a> |
+      <a href="help.php" id="help">Help</a> |
+      <a href="contact.php" id="contactUs">Contact Us</a>
     </div>
 </div>
 </body>
